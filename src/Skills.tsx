@@ -12,7 +12,9 @@ export default function Skills() {
         ref={skillsSectionRef}
       >
         <div className="text-center">
-          <h2 className="text-3xl font-semibold text-center">Skills</h2>
+          <h2 className="text-3xl font-semibold text-center dark:text-darkPrimaryText">
+            Skills
+          </h2>
 
           <div className="flex justify-center gap-10 mt-5">
             <div style={container}>
