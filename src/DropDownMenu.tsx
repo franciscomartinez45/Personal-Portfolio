@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
-import { useTheme } from "../ThemeContext";
 
 export const DropDownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
 
   return (
     <div className="fixed w-16 h-20 z-10 right-0">

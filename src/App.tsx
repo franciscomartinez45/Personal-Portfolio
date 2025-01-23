@@ -1,14 +1,15 @@
-import { DropDownMenu } from "./components/DropDownMenu";
-import Home from "./Home";
-import "./index.css";
-import { ThemeProvider } from "./ThemeContext";
+import { DropDownMenu } from "./DropDownMenu";
+import Index from "./Index";
+
+import "./style/index.css";
+import { ThemeProvider } from "./style/ThemeContext";
 
 export const App = () => {
   return (
     <div>
       <ThemeProvider>
         <DropDownMenu />
-        <Home />
+        <Index />
       </ThemeProvider>
     </div>
   );
