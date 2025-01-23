@@ -1,5 +1,5 @@
-import { motion, useInView, useScroll } from "motion/react";
-import { useRef } from "react";
+import { motion, useScroll } from "motion/react";
+
 import { ThemeProvider } from "./style/ThemeContext";
 
 import "./style/index.css";
