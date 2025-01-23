@@ -1,70 +1,49 @@
 import { useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
+import { useTheme } from "../ThemeContext";
+
 export const DropDownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
 
   return (
-    <div className="fixed w-16 h-20  z-10 right-0">
+    <div className="fixed w-16 h-20 z-10 right-0">
       <div
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
       >
-        <button className="absolute w-16 h-20 right-0 top-0  text-white px-4 py-8 rounded-md">
-          <CiMenuBurger
-            size={36}
-            style={{ justifySelf: "center", color: "white" }}
-          />
+        <button className="absolute w-16 h-20 right-0 top-0  px-4 py-8 rounded-md">
+          <CiMenuBurger size={40} className=" text-black dark:text-white" />
         </button>
+
         {isOpen && (
-          <ul className="absolute right-0 top-16 mt-2 w-40 bg-white border border-gray-300 rounded-md shadow-lg">
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              <a
-                href="#home"
-                className="block"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </a>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              <a
-                href="#skills"
-                className="block"
-                onClick={() => setIsOpen(false)}
-              >
-                Skills
-              </a>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              <a
-                href="#projects"
-                className="block"
-                onClick={() => setIsOpen(false)}
-              >
-                Projects
-              </a>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              <a
-                href="#about"
-                className="block"
-                onClick={() => setIsOpen(false)}
-              >
-                About Me
-              </a>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              <a
-                href="#Contact"
-                className="block"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </a>
-            </li>
+          <ul className={ulStyle}>
+            {sectionRefs.map((section) => (
+              <li className={listStyle}>
+                <a
+                  href={section}
+                  className="block text-base font-medium text-gray-800 dark:text-black "
+                  onClick={() => setIsOpen(false)}
+                >
+                  {section.replace("#", "").toUpperCase()}
+                </a>
+              </li>
+            ))}
           </ul>
         )}
       </div>
     </div>
   );
 };
+const listStyle =
+  "group px-4 py-3 hover:bg-primaryBg dark:text-black transition duration-300 ease-in-out";
+const ulStyle =
+  "absolute right-0 top-16 mt-2 w-56 bg-white border border-slate-900 border-t-0 border-r-0 rounded-lg shadow-xl z-40 overflow-hidden";
+const sectionRefs = [
+  "#home",
+  "#about",
+  "#achievements",
+  "#skills",
+  "#projects",
+  "#contact",
+];

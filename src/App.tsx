@@ -1,12 +1,15 @@
 import { DropDownMenu } from "./components/DropDownMenu";
 import Home from "./Home";
 import "./index.css";
+import { ThemeProvider } from "./ThemeContext";
 
 export const App = () => {
   return (
     <div>
-      <DropDownMenu />
-      <Home />
+      <ThemeProvider>
+        <DropDownMenu />
+        <Home />
+      </ThemeProvider>
     </div>
   );
 };
