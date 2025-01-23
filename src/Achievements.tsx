@@ -1,7 +1,7 @@
 export default function Achievements() {
   return (
     <section id="achievements" className="section-container">
-      <section className="awards py-20 bg-primaryBg dark:bg-darkPrimaryBg  h-screen">
+      <section className="awards py-20   h-screen">
         <h2 className="text-3xl font-semibold text-center">Achievements</h2>
         <div className="flex justify-center gap-10 mt-5">
           <div className="award-card">

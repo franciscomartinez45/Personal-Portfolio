@@ -11,7 +11,7 @@ export const DropDownMenu = () => {
         onMouseLeave={() => setIsOpen(false)}
       >
         <button className="absolute w-16 h-20 right-0 top-0  px-4 py-8 rounded-md">
-          <CiMenuBurger size={40} className=" text-black dark:text-white" />
+          <CiMenuBurger size={40} className=" " />
         </button>
 
         {isOpen && (

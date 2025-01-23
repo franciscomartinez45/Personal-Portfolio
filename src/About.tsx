@@ -9,12 +9,12 @@ export default function About() {
     <section
       id="about"
       ref={aboutSectionRef}
-      className="section-container flex items-center justify-center h-screen bg-primaryBg text-primaryText dark:text-primaryText dark:bg-darkPrimaryBg"
+      className="section-container flex items-center justify-center h-screen text-primaryText"
     >
       <div className="flex items-center justify-center h-3/5 w-4/5 ">
         <div className="flex flex-col justify-center items-center w-screen max-h-full h-screen ">
-          <div className="flex items-center justify-evenly max-w-screen-xl w-11/12 p-6 mb-6 bg-blue-100 rounded-lg shadow-lg max-h-screen h-3/4">
-            <div className="w-56 h-56 rounded-full bg-blue-200 mr-6 "></div>
+          <div className="flex items-center justify-evenly max-w-screen-xl w-11/12 p-6 mb-6 bg-gray-200 rounded-lg shadow-lg max-h-screen h-3/4">
+            <div className="w-56 h-56 rounded-full bg-slate-700 mr-6 "></div>
             <div className="">
               <h3 className="text-xl font-semibold ">Your Name</h3>
               <p className="">Short description about yourself</p>
@@ -34,7 +34,7 @@ export default function About() {
                   times: [0, 1.5, 3],
                 }}
                 key={index}
-                className="w-1/3  text-center h-1/2 flex items-center justify-center p-6 mb-6 bg-blue-100 rounded-lg shadow-lg"
+                className="w-1/3  text-center h-1/2 flex items-center justify-center p-6 mb-6 bg-gray-200 rounded-lg shadow-lg"
               >
                 <p className="">{fact}</p>
               </motion.div>

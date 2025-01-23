@@ -3,10 +3,7 @@ import { motion } from "motion/react";
 export default function Projects() {
   return (
     <section className="section-container">
-      <section
-        id="projects"
-        className="projects py-20 bg-primaryBg dark:bg-darkPrimaryBg  h-screen"
-      >
+      <section id="projects" className="projects py-20   h-screen">
         <h2 className="text-3xl font-semibold text-center">Projects</h2>
         <div className="project-card">
           <img src="project-thumbnail.jpg" alt="Project" />

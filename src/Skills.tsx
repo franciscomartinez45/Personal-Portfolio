@@ -8,7 +8,7 @@ export default function Skills() {
     <section className="section-container">
       <section
         id="skills"
-        className="skills py-20 h-screen justify-center bg-primaryBg dark:bg-darkPrimaryBg "
+        className="skills py-20 h-screen justify-center text-primaryText"
         ref={skillsSectionRef}
       >
         <div className="text-center">
@@ -39,6 +39,7 @@ export default function Skills() {
                     scale: [null, 1.1, 1.6],
                     transition: {
                       duration: 0.7,
+                      delay: 0,
                       times: [0, 0.3, 0.7],
                       ease: ["easeIn", "easeOut"],
                     },

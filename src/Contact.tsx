@@ -3,10 +3,10 @@ import { scrollToSection } from "./Home";
 
 export default function Contact() {
   return (
-    <section className="section-container">
+    <section className="section-container flex items-center h-screen">
       <section
         id="contact"
-        className="contact py-20 bg-primaryBg dark:bg-darkPrimaryBg  h-screen"
+        className=" contact py-20 h-screen max-w-screen-xl w-5/6 justify-center "
       >
         <h2 className="text-3xl font-semibold text-center">Contact Me</h2>
         <form className="mt-10">
@@ -34,7 +34,7 @@ export default function Contact() {
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer p-16"
+          className=" bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer p-16 bottom-1"
           onClick={() => scrollToSection("home")}
         >
           Back to top
