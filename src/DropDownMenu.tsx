@@ -43,5 +43,6 @@ const sectionRefs = [
   "#achievements",
   "#skills",
   "#projects",
+  "#research",
   "#contact",
 ];

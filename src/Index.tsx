@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import About from "./About";
 import Achievements from "./Achievements";
 import ProgressBar from "./ProgressBar";
+import Research from "./Research";
 
 export default function Index() {
   return (
@@ -18,6 +19,7 @@ export default function Index() {
         <Achievements></Achievements>
         <Skills></Skills>
         <Projects></Projects>
+        <Research></Research>
         <Contact></Contact>
         <ProgressBar></ProgressBar>
       </div>

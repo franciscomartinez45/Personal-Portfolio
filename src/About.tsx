@@ -59,4 +59,4 @@ export default function About() {
   );
 }
 
-const facts: string[] = ["GitHub", "Resume", "I have 2 cats"];
+const facts: string[] = ["GitHub", "Download Resume", "ML Research"];
