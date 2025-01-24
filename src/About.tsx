@@ -16,10 +16,13 @@ export default function About() {
           <div className="flex items-center justify-evenly max-w-screen-xl w-11/12 p-6 mb-6 bg-gray-200 rounded-lg shadow-lg max-h-screen h-3/4">
             <div className="w-56 h-56 rounded-full bg-slate-700 mr-6 "></div>
             <div className="">
-              <h3 className="text-xl font-semibold ">Your Name</h3>
-              <p className="">Short description about yourself</p>
-              <p className="">Another line of details</p>
-              <p className="">Additional info or tagline</p>
+              <h3 className="text-xl font-semibold ">Francisco Martinez</h3>
+              <p className="text-lg">
+                California State University, Dominguez Hills
+              </p>
+              <p className="text-lg">Carson, CA</p>
+              <p className="text-base">Bachelor of Science, Computer Science</p>
+              <p className="">April 2021- Dec 2024</p>
             </div>
           </div>
 
@@ -33,10 +36,20 @@ export default function About() {
                   ease: "easeOut",
                   times: [0, 1.5, 3],
                 }}
+                whileHover={{
+                  scale: [null, 1.1, 1.3],
+                  transition: {
+                    duration: 0.7,
+                    delay: 0,
+                    times: [0, 0.3, 0.7],
+                    ease: ["easeIn", "easeOut"],
+                  },
+                }}
                 key={index}
                 className="w-1/3  text-center h-1/2 flex items-center justify-center p-6 mb-6 bg-gray-200 rounded-lg shadow-lg"
               >
-                <p className="">{fact}</p>
+                {" "}
+                <p>{fact}</p>
               </motion.div>
             ))}
           </div>
@@ -46,8 +59,4 @@ export default function About() {
   );
 }
 
-const facts: string[] = [
-  "I aspire to become a Machine Learning Engineer",
-  "I like to play soccer and Call of Duty in my free time",
-  "I have 2 cats",
-];
+const facts: string[] = ["GitHub", "Resume", "I have 2 cats"];
