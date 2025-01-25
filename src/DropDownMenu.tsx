@@ -15,12 +15,12 @@ export const DropDownMenu = () => {
         </button>
 
         {isOpen && (
-          <ul className="absolute right-0 top-16 mt-2 w-56 bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText border  border-slate-900 border-t-0 border-r-0 rounded-lg shadow-xl z-40 overflow-hidden">
+          <ul className="absolute right-0 top-16 mt-2 w-56  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText border  border-slate-900 border-t-0 border-r-0 rounded-lg shadow-xl z-40 overflow-hidden">
             {sectionRefs.map((section) => (
-              <li className="group px-4 py-3  transition duration-300 ease-in-out">
+              <li className="group px-4 py-3  hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg">
                 <a
                   href={section}
-                  className="block text-base font-medium  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText "
+                  className="block text-base font-medium    "
                   onClick={() => setIsOpen(false)}
                 >
                   {section.replace("#", "").toUpperCase()}
@@ -36,7 +36,7 @@ export const DropDownMenu = () => {
 
 const sectionRefs = [
   "#home",
-  "#about",
+  "#overview",
   "#achievements",
   "#skills",
   "#projects",

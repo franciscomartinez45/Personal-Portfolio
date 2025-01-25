@@ -50,59 +50,61 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="section-container" id="projects">
-      <section className="py-20 dark:text-primaryText">
-        <h2 className="text-3xl font-semibold text-center mb-10 dark:text-darkPrimaryText">
-          My GitHub Projects
-        </h2>
-        {loading ? (
-          <p className="text-center">Loading...</p>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6">
-            {repos.map((repo) => (
-              <motion.div
-                whileHover={{
-                  scale: [null, 1.0, 1.04],
-                  transition: {
-                    duration: 0.5,
-                    delay: 0,
-                    times: [0, 0.3, 0.5],
-                    ease: ["easeIn", "easeOut"],
-                  },
-                }}
-              >
-                <a
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" mt-5  inline-block"
+    <section className="section-container overflow-y-scroll " id="projects">
+      <div className="flex justify-center">
+        <section className="py-20 dark:text-primaryText md:w-10/12 h-5/6 l lg:w-1/2 ">
+          <h2 className="text-3xl font-semibold text-center mb-10 dark:text-darkPrimaryText">
+            My GitHub Projects
+          </h2>
+          {loading ? (
+            <p className="text-center">Loading...</p>
+          ) : (
+            <div className="grid gap-6 grid-cols-2 grid-rows-3 ">
+              {repos.map((repo) => (
+                <motion.div
+                  whileHover={{
+                    scale: [null, 1.0, 1.04],
+                    transition: {
+                      duration: 0.5,
+                      delay: 0,
+                      times: [0, 0.3, 0.5],
+                      ease: ["easeIn", "easeOut"],
+                    },
+                  }}
                 >
-                  <div
-                    key={repo.id}
-                    className="shadow-lg rounded-lg p-4 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900"
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" mt-5  inline-block"
                   >
-                    <h3 className="font-bold text-lg">{repo.name}</h3>
-                    <p className="font-light text-sm">
-                      {repo.description || "No description provided."}
-                    </p>
-                    <p className="text-sm mt-2">
-                      <strong>Language:</strong>{" "}
-                      {repo.language || "Not specified"}
-                    </p>
-                    <p className="text-sm font-light mt-0">
-                      <strong className="font-bold">Topics:</strong>
-                      {repo.topics.map((topic) => (
-                        <>{" " + topic + ","}</>
-                      ))}
-                    </p>
-                  </div>
-                </a>
-              </motion.div>
-            ))}
-            ;
-          </div>
-        )}
-      </section>
+                    <div
+                      key={repo.id}
+                      className="shadow-lg rounded-lg p-4 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg"
+                    >
+                      <h3 className="font-bold text-lg">{repo.name}</h3>
+                      <p className="font-light text-sm">
+                        {repo.description || "No description provided."}
+                      </p>
+                      <p className="text-sm mt-2">
+                        <strong>Language:</strong>{" "}
+                        {repo.language || "Not specified"}
+                      </p>
+                      <p className="text-sm font-light mt-0">
+                        <strong className="font-bold">Topics:</strong>
+                        {repo.topics.map((topic) => (
+                          <>{" " + topic + ","}</>
+                        ))}
+                      </p>
+                    </div>
+                  </a>
+                </motion.div>
+              ))}
+              ;
+            </div>
+          )}
+        </section>
+      </div>
     </section>
   );
 }

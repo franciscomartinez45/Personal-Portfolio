@@ -5,19 +5,17 @@ export default function Skills() {
   const skillsSectionRef = useRef(null);
   const isSkillsInView = useInView(skillsSectionRef, { once: false });
   return (
-    <section className="section-container">
+    <section className="section-container overflow-hidden">
       <section
         id="skills"
-        className="skills py-20 h-screen justify-center text-primaryText"
+        className="skills py-20 h-screen justify-center "
         ref={skillsSectionRef}
       >
         <div className="text-center">
-          <h2 className="text-3xl font-semibold text-center dark:text-darkPrimaryText">
-            Skills
-          </h2>
+          <h2 className="text-3xl font-semibold text-center ">Skills</h2>
 
-          <div className="flex justify-center gap-10 mt-5">
-            <div style={container}>
+          <div className="flex justify-center gap-10 mt-0">
+            <div className="grid grid-cols-4 grid-rows-4">
               {skills.map((skill, index) => (
                 <motion.div
                   initial={{ x: 0, y: 0 }}
@@ -36,9 +34,9 @@ export default function Skills() {
                     delay: index * 0.3,
                   }}
                   key={index}
-                  style={box}
+                  className="flex w-24 h-24 shadow-lg rounded-lg justify-center items-center m-5 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg"
                   whileHover={{
-                    scale: [null, 1.1, 1.6],
+                    scale: [null, 1.1, 1.2],
                     transition: {
                       duration: 0.7,
                       delay: 0,

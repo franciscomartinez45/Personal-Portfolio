@@ -10,7 +10,10 @@ export const scrollToSection = (location: string) => {
 
 export default function Home() {
   return (
-    <section id="home" className="section-container">
+    <section
+      id="home"
+      className="section-container bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
+    >
       <ThemeSwitcher />
       <section className="hero bg-cover bg-center text-center h-screen  flex items-center justify-center ">
         <div className="text-center">
