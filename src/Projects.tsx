@@ -38,7 +38,6 @@ export default function Projects() {
             repositories.includes(item.name)
           )
         );
-        console.log(response.data);
       } catch (error) {
         console.error("Error fetching GitHub repos:", error);
       } finally {
