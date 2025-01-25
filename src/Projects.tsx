@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { motion } from "motion/react";
+import { animate } from "motion";
 
 interface Repo {
   id: number;
@@ -17,8 +19,8 @@ export default function Projects() {
     "Purffect-Health",
     "Cipher-Care",
     "Full-Stack-Web-Application",
-    "iceman",
-    "personal-portfolio",
+    "IceMan",
+    "Personal-Portfolio",
   ];
 
   useEffect(() => {
@@ -59,32 +61,44 @@ export default function Projects() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6">
             {repos.map((repo) => (
-              <a
-                href={repo.html_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" mt-5  inline-block"
+              <motion.div
+                whileHover={{
+                  scale: [null, 1.0, 1.04],
+                  transition: {
+                    duration: 0.5,
+                    delay: 0,
+                    times: [0, 0.3, 0.5],
+                    ease: ["easeIn", "easeOut"],
+                  },
+                }}
               >
-                <div
-                  key={repo.id}
-                  className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition"
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" mt-5  inline-block"
                 >
-                  <h3 className="font-semibold text-lg">{repo.name}</h3>
-                  <p className="text-gray-600">
-                    {repo.description || "No description provided."}
-                  </p>
-                  <p className="text-sm text-gray-500 mt-2">
-                    <strong>Language:</strong>{" "}
-                    {repo.language || "Not specified"}
-                  </p>
-                  <p className="text-sm text-gray-500 mt-0">
-                    <strong>Topics:</strong>
-                    {repo.topics.map((topic) => (
-                      <>{" " + topic + ","}</>
-                    ))}
-                  </p>
-                </div>
-              </a>
+                  <div
+                    key={repo.id}
+                    className="shadow-lg rounded-lg p-4 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900"
+                  >
+                    <h3 className="font-bold text-lg">{repo.name}</h3>
+                    <p className="font-light text-sm">
+                      {repo.description || "No description provided."}
+                    </p>
+                    <p className="text-sm mt-2">
+                      <strong>Language:</strong>{" "}
+                      {repo.language || "Not specified"}
+                    </p>
+                    <p className="text-sm font-light mt-0">
+                      <strong className="font-bold">Topics:</strong>
+                      {repo.topics.map((topic) => (
+                        <>{" " + topic + ","}</>
+                      ))}
+                    </p>
+                  </div>
+                </a>
+              </motion.div>
             ))}
             ;
           </div>
