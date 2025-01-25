@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "motion/react";
-import { animate } from "motion";
 
 interface Repo {
   id: number;
