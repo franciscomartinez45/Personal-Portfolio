@@ -74,22 +74,3 @@ const skills = [
   "Linux-Ubuntu",
   "AI/ML",
 ];
-
-const box = {
-  width: 100,
-  height: 100,
-  backgroundColor: "white",
-  borderRadius: 10,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2)",
-  border: "2px solid rgba(0, 0, 0, 0.05)",
-};
-
-const container = {
-  display: "grid",
-  gridTemplateColumns: "repeat(4, 1fr)",
-  gap: "40px",
-  margin: "20px",
-};
