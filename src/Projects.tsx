@@ -49,7 +49,10 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="section-container overflow-y-scroll " id="projects">
+    <section
+      className="section-container overflow-y-scroll bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
+      id="projects"
+    >
       <div className="flex justify-center">
         <section className="py-20 dark:text-primaryText md:w-10/12 h-5/6 l lg:w-1/2 ">
           <h2 className="text-3xl font-semibold text-center mb-10 dark:text-darkPrimaryText">

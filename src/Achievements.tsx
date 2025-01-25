@@ -1,11 +1,14 @@
 export default function Achievements() {
   return (
-    <section id="achievements" className="section-container  ">
+    <section
+      id="achievements"
+      className="section-container  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
+    >
       <section className="awards py-20 ">
         <h2 className="text-3xl font-semibold text-center">Achievements</h2>
         <div className="flex justify-center">
           <div className="grid grid-rows-2 grid-cols-2 gap-14 mt-10">
-            <div className="award-card justify-items-center shadow-lg rounded-lg shadow-slate-500 dark:shadow-slate-900 p-5 max-w-sm">
+            <div className="award-card justify-items-center shadow-lg rounded-lg  p-5 max-w-sm dark:shadow-slate-900">
               <div className="flex items-center gap-3">
                 <h3 className="text-xl font-bold ">Certificates</h3>
               </div>
@@ -25,7 +28,7 @@ export default function Achievements() {
               </div>
             </div>
 
-            <div className="award-card  shadow-lg rounded-lg shadow-slate-500 dark:shadow-slate-900 p-5 max-w-sm">
+            <div className="award-card  shadow-lg rounded-lg dark:shadow-slate-900  p-5 max-w-sm ">
               <div className="flex items-center gap-3">
                 <h3 className="text-xl font-bold ">Honor Roll</h3>
               </div>
@@ -40,7 +43,7 @@ export default function Achievements() {
               </strong>
             </div>
 
-            <div className="award-card  shadow-lg rounded-lg shadow-slate-500 dark:shadow-slate-900 p-5 max-w-sm">
+            <div className="award-card  shadow-lg rounded-lg  dark:shadow-slate-900 p-5 max-w-sm ">
               <div className="flex items-center gap-3">
                 <h3 className="text-xl font-bold ">Research Contributions</h3>
               </div>
@@ -52,7 +55,7 @@ export default function Achievements() {
                 California State University, Dominguez Hills
               </strong>
             </div>
-            <div className="aaward-card  shadow-lg rounded-lg shadow-slate-500 dark:shadow-slate-900 p-5 max-w-sm">
+            <div className="aaward-card  shadow-lg grounded-lg dark:shadow-slate-900  p-5 max-w-sm ">
               <div className="flex items-center gap-3">
                 <h3 className="text-xl font-bold ">Dean's List</h3>
               </div>

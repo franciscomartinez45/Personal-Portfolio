@@ -7,7 +7,7 @@ export default {
       colors: {
         primaryBg: "#FFFFFF",
         primaryText: "#333333",
-        secondaryBg: "#F5F5F5",
+        secondaryBg: "#F7F7F7",
         buttonBg: "#4A90E2",
         buttonHoverBg: "#3498DB",
 

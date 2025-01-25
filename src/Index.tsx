@@ -5,24 +5,22 @@ import Home from "./Home";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import Skills from "./Skills";
-import About from "./About";
 import Achievements from "./Achievements";
 import ProgressBar from "./ProgressBar";
 import Research from "./Research";
+import Overview from "./Overview";
 
 export default function Index() {
   return (
     <ThemeProvider>
-      <div className="bg-primaryBg text-primaryText dark:text-darkPrimaryText dark:bg-darkPrimaryBg">
-        <Home></Home>
-        <About></About>
-        <Achievements></Achievements>
-        <Skills></Skills>
-        <Projects></Projects>
-        <Research></Research>
-        <Contact></Contact>
-        <ProgressBar></ProgressBar>
-      </div>
+      <Home></Home>
+      <Overview></Overview>
+      <Achievements></Achievements>
+      <Skills></Skills>
+      <Projects></Projects>
+      <Research></Research>
+      <Contact></Contact>
+      <ProgressBar></ProgressBar>
     </ThemeProvider>
   );
 }

@@ -1,14 +1,15 @@
 import { motion } from "motion/react";
 
-export default function About() {
+export default function Overview() {
   return (
     <section
       id="overview"
-      className="section-container flex items-center justify-center h-screen "
+      className="section-container flex items-center justify-center h-screen bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
     >
       <div className="flex items-center justify-center h-3/5 w-1/2 ">
         <div className="flex flex-col justify-center items-center w-screen max-h-full h-screen ">
           <h2 className="text-3xl font-semibold text-center ">Overview</h2>
+
           <div className="flex items-center justify-evenly max-w-screen-xl w-11/12 p-6 mb-6  rounded-lg shadow-lg max-h-screen h-3/4">
             <div className="w-56 h-56 rounded-full bg-slate-50 mr-6 "></div>
             <div className="">
@@ -20,6 +21,14 @@ export default function About() {
               <p className="text-base">Bachelor of Science, Computer Science</p>
               <p className="">April 2021- Dec 2024</p>
             </div>
+          </div>
+          <div className="flex items-center justify-evenly max-w-screen-xl w-11/12 p-6 mb-6  rounded-lg shadow-lg max-h-screen h-3/4">
+            <p className="italic">
+              Aspiring Software Engineer with hands-on experience developing
+              innovative solutions, from pet care mobile apps to healthcare
+              management systems, driven by a passion for solving real-world
+              problems through technology.
+            </p>
           </div>
 
           <div className="flex justify-evenly max-w-screen-xl w-11/12 gap-4 max-h-full h-1/2 ">

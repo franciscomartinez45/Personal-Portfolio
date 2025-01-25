@@ -25,7 +25,7 @@ export default function Home() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className=" text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer mt-5 "
-            onClick={() => scrollToSection("about")}
+            onClick={() => scrollToSection("overview")}
           >
             Begin learning about me
           </motion.div>

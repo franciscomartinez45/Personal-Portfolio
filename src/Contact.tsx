@@ -3,7 +3,7 @@ import { scrollToSection } from "./Home";
 
 export default function Contact() {
   return (
-    <section className="section-container">
+    <section className="section-container dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText">
       <section id="contact" className=" py-20 ">
         <h2 className="text-3xl font-semibold text-center">Contact Me</h2>
         <div className="flex justify-center">
