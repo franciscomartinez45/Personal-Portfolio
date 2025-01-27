@@ -1,4 +1,4 @@
-import { DropDownMenu } from "./DropDownMenu";
+import { Menu } from "./Menu";
 import Index from "./Index";
 
 import "./style/index.css";
@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <div>
       <ThemeProvider>
-        <DropDownMenu />
+        <Menu />
         <Index />
       </ThemeProvider>
     </div>
