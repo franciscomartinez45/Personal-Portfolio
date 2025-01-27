@@ -19,12 +19,13 @@ export default function Home() {
         <div className="text-center">
           <h1 className="text-4xl font-bold ">Hello, I'm Francisco Martinez</h1>
           <p className="text-xl  mt-2">
-            Full-Stack Developer | Aspiring Machine Learning Engineer
+            B.S. in Computer Science | Aspiring Full-Stack Engineer & AI
+            Enthusiast
           </p>
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className=" text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer mt-5 "
+            className=" text-center px-6 py-3 bg-blue-500 text-darkPrimaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
             onClick={() => scrollToSection("overview")}
           >
             Begin learning about me

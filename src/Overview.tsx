@@ -57,7 +57,7 @@ export default function Overview() {
                 )}
                 {fact.includes("Resume") && (
                   <a
-                    href="../public/FranciscoMartinez_CV.pdf"
+                    href="/FranciscoMartinez_CV.pdf"
                     download="FranciscoMartinez_CV.pdf"
                   >
                     Download Resume

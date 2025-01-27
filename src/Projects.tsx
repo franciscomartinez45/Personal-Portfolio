@@ -20,6 +20,7 @@ export default function Projects() {
     "Full-Stack-Web-Application",
     "IceMan",
     "Personal-Portfolio",
+    "Graph-Convolutional-Network",
   ];
 
   useEffect(() => {

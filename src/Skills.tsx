@@ -29,7 +29,7 @@ export default function Skills() {
                   }
                   transition={{
                     type: "spring",
-                    duration: 1,
+                    duration: 3,
                     ease: "easeOut",
                     delay: index * 0.3,
                   }}
@@ -40,8 +40,7 @@ export default function Skills() {
                     transition: {
                       duration: 0.0,
                       delay: 0,
-
-                      ease: ["easeInOut", "easeOut"],
+                      ease: ["easeIn", "easeOut"],
                     },
                   }}
                 >
@@ -62,7 +61,7 @@ const skills = [
   "Java",
   "React.js",
   "HTML",
-  "CSS",
+  "PyTorch",
   "PHP",
   "React Native",
   "MySQL",
