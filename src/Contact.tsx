@@ -21,12 +21,21 @@ export default function Contact() {
           <p className="text-xl  mt-2 italic">frncsc.mrtnz123@gmail.com</p>
           <div className="flex justify-center ">
             <div className="px-4 py-2">
-              <a href="" className="text-blue-500 font-bold">
+              <a
+                className="text-blue-500 font-bold"
+                href="https://github.com/franciscomartinez45"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
               </a>
             </div>
             <div className="px-4 py-2">
-              <a href="" className="text-blue-500 font-bold">
+              <a
+                href="/FranciscoMartinez_CV.pdf"
+                download="FranciscoMartinez_CV.pdf"
+                className="text-blue-500 font-bold"
+              >
                 Resume
               </a>
             </div>
