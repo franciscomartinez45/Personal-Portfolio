@@ -22,6 +22,7 @@ export default function Projects() {
     "Personal-Portfolio",
     "Graph-Convolutional-Network",
   ];
+  //add filtering
 
   useEffect(() => {
     const fetchRepos = async () => {

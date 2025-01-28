@@ -21,5 +21,6 @@ const sectionRefs = [
   "#skills",
   "#projects",
   "#research",
+  "#status",
   "#contact",
 ];
