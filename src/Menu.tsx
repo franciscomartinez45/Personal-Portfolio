@@ -9,7 +9,7 @@ export const Menu = () => {
           >
             <a
               href={section}
-              className="block text-base font-medium text-[clamp(9px,1vw,32px)]  "
+              className="block text-base font-medium text-[clamp(5px,1vw,32px)]  "
             >
               {section.replace("#", "").toUpperCase()}
             </a>

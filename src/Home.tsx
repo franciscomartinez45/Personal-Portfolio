@@ -17,10 +17,10 @@ export default function Home() {
       <ThemeSwitcher />
       <section className="hero bg-cover  bg-center text-center h-screen  flex items-center justify-center">
         <div className=" text-center w-[60vw]">
-          <h1 className="text-4xl text-[clamp(10px,4vw,32px)] font-bold ">
+          <h1 className="text-4xl text-[clamp(10px,5vw,32px)] font-bold ">
             Hello, I'm Francisco Martinez
           </h1>
-          <p className="text-[clamp(6px,2.5vw,18px)] mt-2">
+          <p className="text-[clamp(8px,2.7vw,18px)] mt-2">
             B.S. in Computer Science | Aspiring Full-Stack Engineer & AI
             Enthusiast
           </p>
