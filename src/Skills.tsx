@@ -34,7 +34,7 @@ export default function Skills() {
                     delay: index * 0.3,
                   }}
                   key={index}
-                  className="flex shadow-lg rounded-full overflow-ellipsis justify-center items-center gap-48 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg w-[clamp(40px,10rem,80px)] h-[clamp(40px,10rem,80px)]  "
+                  className="flex shadow-lg rounded-full  justify-center items-center gap-48 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg w-[clamp(40px,10rem,80px)] h-[clamp(40px,10rem,80px)]  "
                   whileHover={{
                     scale: [null, 1.1, 1.2],
                     transition: {
