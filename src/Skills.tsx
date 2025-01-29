@@ -8,13 +8,13 @@ export default function Skills() {
     <section className="section-container overflow-hidden bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2vw,12px)]">
       <section
         id="skills"
-        className="skills py-20 justify-center w-[90vw] items-center"
+        className="skills py-20 justify-center items-center"
         ref={skillsSectionRef}
       >
         <div className="text-center">
           <h2 className="text-3xl font-semibold text-center ">Skills</h2>
 
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center py-7">
             <div className="grid grid-cols-4 grid-rows-4  gap-[clamp(25px,1.5rem,40px)]">
               {skills.map((skill, index) => (
                 <motion.div
