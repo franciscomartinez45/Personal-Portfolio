@@ -5,17 +5,17 @@ export default function Skills() {
   const skillsSectionRef = useRef(null);
   const isSkillsInView = useInView(skillsSectionRef, { once: false });
   return (
-    <section className="section-container overflow-hidden bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText">
+    <section className="section-container overflow-hidden bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2vw,12px)]">
       <section
         id="skills"
-        className="skills py-20 h-screen justify-center w-screen "
+        className="skills py-20 justify-center w-[90vw] items-center"
         ref={skillsSectionRef}
       >
         <div className="text-center">
           <h2 className="text-3xl font-semibold text-center ">Skills</h2>
 
-          <div className="flex justify-center gap-10 mt-0">
-            <div className="grid grid-cols-4 grid-rows-4 w-5/12 mt-5">
+          <div className="flex justify-center items-center ">
+            <div className="grid grid-cols-4 grid-rows-4  gap-[clamp(25px,1.5rem,40px)]">
               {skills.map((skill, index) => (
                 <motion.div
                   initial={{ x: 0, y: 0 }}
@@ -34,7 +34,7 @@ export default function Skills() {
                     delay: index * 0.3,
                   }}
                   key={index}
-                  className="flex text-sm w-28 h-20 shadow-lg rounded-full justify-center items-center mb-3 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg  "
+                  className="flex shadow-lg rounded-full justify-center items-center gap-48 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg w-[clamp(40px,10rem,80px)] h-[clamp(40px,10rem,80px)]  "
                   whileHover={{
                     scale: [null, 1.1, 1.2],
                     transition: {

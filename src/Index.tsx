@@ -10,7 +10,13 @@ import ProgressBar from "./ProgressBar";
 import Research from "./Research";
 import Overview from "./Overview";
 
+
+export interface windowWidth {
+  width: number;
+}
 export default function Index() {
+ 
+
   return (
     <ThemeProvider>
       <Home></Home>

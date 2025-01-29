@@ -6,12 +6,12 @@ export default function Research() {
       className="section-container bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText "
       id="research"
     >
-      <div className="flex justify-center">
-        <div className="py-16 w-3/4">
-          <h2 className="text-3xl font-semibold text-center  dark:text-darkPrimaryText ">
+      <div className="flex justify-center h-[90vh]">
+        <div className="py-16">
+          <h2 className="text-xl font-semibold text-center  dark:text-darkPrimaryText ">
             Research Project
           </h2>
-          <div className="py-5">
+          <div className="py-5 px-16 text-[clamp(10px,1.4vw,16px)]">
             <div className="flex justify-center align-middle">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy
@@ -101,7 +101,7 @@ export default function Research() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className=" text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer mt-5 "
+                className=" text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer mt-5 text-[clamp(8px,14px,16px)]"
               >
                 Go to project's Github
               </motion.div>

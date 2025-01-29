@@ -56,14 +56,14 @@ export default function Projects() {
       id="projects"
     >
       <div className="flex justify-center">
-        <section className="py-20 dark:text-primaryText md:w-10/12 h-5/6 l lg:w-1/2 ">
-          <h2 className="text-3xl font-semibold text-center mb-10 dark:text-darkPrimaryText">
+        <section className="py-20 dark:text-primaryText  ">
+          <h2 className="text-xl font-semibold text-center mb-10 dark:text-darkPrimaryText">
             My GitHub Projects
           </h2>
           {loading ? (
             <p className="text-center">Loading...</p>
           ) : (
-            <div className="grid gap-6 grid-cols-2 grid-rows-3 ">
+            <div className="grid gap-x-[clamp(10px,20px,20px)] grid-cols-2 grid-rows-3 w-[clamp(60vw,50vw,50vw)]">
               {repos.map((repo) => (
                 <motion.div
                   whileHover={{
@@ -84,17 +84,17 @@ export default function Projects() {
                   >
                     <div
                       key={repo.id}
-                      className="shadow-lg rounded-lg p-4 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg"
+                      className="shadow-lg text-[clamp(9px,2vw,16px)] rounded-lg p-4 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg"
                     >
-                      <h3 className="font-bold text-lg">{repo.name}</h3>
-                      <p className="font-light text-sm">
+                      <h3 className="font-bold ">{repo.name}</h3>
+                      <p className="font-light ">
                         {repo.description || "No description provided."}
                       </p>
-                      <p className="text-sm mt-2">
+                      <p className=" mt-2">
                         <strong>Language:</strong>{" "}
                         {repo.language || "Not specified"}
                       </p>
-                      <p className="text-sm font-light mt-0">
+                      <p className=" font-light mt-0">
                         <strong className="font-bold">Topics:</strong>
                         {repo.topics.map((topic) => (
                           <>{" " + topic + ","}</>

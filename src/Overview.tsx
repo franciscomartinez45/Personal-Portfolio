@@ -4,34 +4,33 @@ export default function Overview() {
   return (
     <section
       id="overview"
-      className="section-container flex items-center justify-center h-screen bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
+      className="section-container flex items-center justify-center  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(5px,2.3vw,17px)]"
     >
-      <div className="flex items-center justify-center h-3/5 w-1/2 ">
-        <div className="flex flex-col justify-center items-center w-screen max-h-full h-screen ">
-          <h2 className="text-3xl font-semibold text-center ">Overview</h2>
-
-          <div className="flex items-center justify-evenly max-w-screen-xl w-11/12 p-6 mb-6  rounded-lg shadow-lg max-h-screen h-3/4">
-            <div className="w-56 h-56 rounded-full bg-slate-50 mr-6 "></div>
-            <div className="">
-              <h3 className="text-xl font-semibold ">Francisco Martinez</h3>
-              <p className="text-lg">
+      <div className="flex items-center justify-center w-[40vw]">
+        <div className="flex flex-col justify-center items-center ">
+          <div className="flex items-center justify-evenly p-6 mb-6 rounded-lg shadow-lg  ">
+            <div className=" rounded-full bg-slate-50 mr-6 h-[clamp(18vw,4vw,22vw)] w-[clamp(18vw,4vw,22vw)]"></div>
+            <div className="w-[30vw] ">
+              <h2 className=" font-bold ">Francisco Martinez</h2>
+              <h3 className="">Bachelor of Science, Computer Science</h3>
+              <p className="font-light">
                 California State University, Dominguez Hills
               </p>
-              <p className="text-lg">Carson, CA</p>
-              <p className="text-base">Bachelor of Science, Computer Science</p>
-              <p className="">April 2021- Dec 2024</p>
+              <p className="font-light">Carson, CA</p>
+
+              <p className="font-light">April 2021- Dec 2024</p>
             </div>
           </div>
-          <div className="flex items-center justify-evenly max-w-screen-xl w-11/12 p-6 mb-6  rounded-lg shadow-lg max-h-screen h-3/4">
+          <div className="flex items-center justify-evenly  p-6 mb-6  rounded-lg shadow-lg  ">
             <p className="italic">
               Aspiring Software Engineer with hands-on experience developing
-              innovative solutions, from pet care mobile apps to healthcare
-              management systems, driven by a passion for solving real-world
-              problems through technology.
+              React.js, React Native and Java full-stack applications ranging
+              from pet care mobile apps to healthcare management systems and
+              personal portfolios.
             </p>
           </div>
 
-          <div className="flex justify-evenly max-w-screen-xl w-11/12 gap-4 max-h-full h-1/2 ">
+          <div className="flex justify-evenly  gap-4  w-[50vw] h-[7vh] ">
             {facts.map((fact, index) => (
               <motion.div
                 whileHover={{
@@ -44,7 +43,7 @@ export default function Overview() {
                   },
                 }}
                 key={index}
-                className="font-bold w-1/3  text-center h-1/2 flex items-center justify-center p-6 mb-6 rounded-lg shadow-lg"
+                className="font-bold   text-center  flex items-center justify-center p-6 mb-6 rounded-lg shadow-lg"
               >
                 {fact.includes("GitHub") && (
                   <a

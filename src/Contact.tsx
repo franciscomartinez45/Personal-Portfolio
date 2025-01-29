@@ -9,10 +9,10 @@ export default function Contact() {
     >
       <section className="hero bg-cover bg-center text-center h-screen  flex items-center justify-center  ">
         <div className="text-center w-1/2">
-          <h1 className="text-4xl font-bold ">
+          <h1 className="text-xl font-bold ">
             Thank you for visiting my portfolio!
           </h1>
-          <p className="text-xl  mt-2">
+          <p className="text-md  mt-2">
             I am always eager to take on new challenges and collaborate on
             innovative projects. Feel free to reach out—let's create something
             amazing together!
