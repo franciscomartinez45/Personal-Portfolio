@@ -18,7 +18,9 @@ export default function Contact() {
             amazing together!
           </p>
           <p className="text-xl  mt-2 italic font-bold">Francisco Martinez</p>
-          <p className="text-xl  mt-2 italic">frncsc.mrtnz123@gmail.com</p>
+          <p className="text-xl  mt-2 italic">
+            francisco.martinez-dev@outlook.com
+          </p>
           <div className="flex justify-center ">
             <div className="px-4 py-2">
               <a
