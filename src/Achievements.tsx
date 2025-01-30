@@ -2,7 +2,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="section-container  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(5px,2.1vw,16px)]"
+      className="section-container  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2.05vw,16px)]"
     >
       <section className="awards py-20">
         <h1 className="font-bold text-center">Achievements</h1>
