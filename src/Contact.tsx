@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section-container dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
+      className="section-container  text-primaryText dark:text-darkPrimaryText"
     >
       <section className="hero bg-cover bg-center text-center h-screen  flex items-center justify-center  ">
         <div className="text-center w-1/2">

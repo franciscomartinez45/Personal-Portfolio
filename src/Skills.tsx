@@ -5,7 +5,7 @@ export default function Skills() {
   const skillsSectionRef = useRef(null);
   const isSkillsInView = useInView(skillsSectionRef, { once: false });
   return (
-    <section className="section-container overflow-hidden bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2vw,12px)]">
+    <section className="section-container text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2vw,12px)]">
       <section
         id="skills"
         className="skills py-20 justify-center items-center"

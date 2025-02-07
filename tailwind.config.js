@@ -10,7 +10,6 @@ export default {
         secondaryBg: "#F7F7F7",
         buttonBg: "#4A90E2",
         buttonHoverBg: "#3498DB",
-
         darkPrimaryBg: "#2C3E50",
         darkPrimaryText: "#FFFFFF",
         darkSecondaryBg: "#34495E",
@@ -19,5 +18,14 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase, theme }) {
+      addBase({
+        ":root": {
+          "--primary-text": theme("colors.primaryText"),
+          "--secondary-text": theme("colors.darkPrimaryText"),
+        },
+      });
+    },
+  ],
 };

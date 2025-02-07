@@ -4,11 +4,11 @@ export default function Overview() {
   return (
     <section
       id="overview"
-      className="section-container flex items-center justify-center  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(5px,2.3vw,17px)]"
+      className="section-container flex items-center justify-center text-primaryText dark:text-darkPrimaryText text-[clamp(5px,2.3vw,17px)]"
     >
-      <div className="flex items-center justify-center w-[40vw]">
+      <div className="flex items-center justify-center w-[40vw] ">
         <div className="flex flex-col justify-center items-center ">
-          <div className="flex items-center justify-evenly p-6 mb-6 rounded-lg shadow-lg  ">
+          <div className="flex items-center justify-evenly p-6 mb-6 rounded-lg shadow-lg bg-primaryBg dark:bg-darkPrimaryBg ">
             <div className=" rounded-full bg-slate-50 mr-6 h-[clamp(18vw,4vw,22vw)] w-[clamp(18vw,4vw,22vw)]"></div>
             <div className="w-[30vw] ">
               <h2 className=" font-bold ">Francisco Martinez</h2>
@@ -21,7 +21,7 @@ export default function Overview() {
               <p className="font-light">April 2021- Dec 2024</p>
             </div>
           </div>
-          <div className="flex items-center justify-evenly  p-6 mb-6  rounded-lg shadow-lg  ">
+          <div className="flex items-center justify-evenly bg-primaryBg dark:bg-darkPrimaryBg p-6 mb-6  rounded-lg shadow-lg  ">
             <p className="italic">
               Aspiring Software Engineer with hands-on experience developing
               React.js, React Native and Java full-stack applications ranging
@@ -43,7 +43,7 @@ export default function Overview() {
                   },
                 }}
                 key={index}
-                className="font-bold   text-center  flex items-center justify-center p-6 mb-6 rounded-lg shadow-lg"
+                className="font-bold bg-primaryBg dark:bg-darkPrimaryBg  text-center  flex items-center justify-center p-6 mb-6 rounded-lg shadow-lg"
               >
                 {fact.includes("GitHub") && (
                   <a

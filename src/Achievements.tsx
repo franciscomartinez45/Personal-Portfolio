@@ -2,13 +2,13 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="section-container  bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2.05vw,16px)]"
+      className="section-container  text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2.05vw,16px)]"
     >
       <section className="awards py-20">
         <h1 className="font-bold text-center">Achievements</h1>
         <div className="flex justify-center">
           <div className="grid grid-rows-2 grid-cols-2 gap-10 mt-7 ">
-            <div className="award-card shadow-lg rounded-lg p-5 dark:shadow-slate-900 w-[30vw] h-[30vh]">
+            <div className="award-card shadow-lg rounded-lg p-5 bg-primaryBg dark:bg-darkPrimaryBg dark:shadow-slate-900 w-[30vw] h-[30vh]">
               <div className="flex items-center">
                 <h3 className="font-bold ">Certificates</h3>
               </div>
@@ -28,7 +28,7 @@ export default function Achievements() {
               </div>
             </div>
 
-            <div className="award-card  shadow-lg rounded-lg p-5 dark:shadow-slate-900  w-[30vw] h-[30vh]">
+            <div className="award-card  shadow-lg rounded-lg p-5 bg-primaryBg dark:bg-darkPrimaryBg  dark:shadow-slate-900  w-[30vw] h-[30vh]">
               <div className="flex items-center ">
                 <h3 className=" font-bold ">Honor Roll</h3>
               </div>
@@ -43,7 +43,7 @@ export default function Achievements() {
                 </strong>
               </div>
             </div>
-            <div className="award-card  shadow-lg rounded-lg p-5 dark:shadow-slate-900  w-[30vw] h-[30vh]">
+            <div className="award-card  shadow-lg rounded-lg p-5 bg-primaryBg dark:bg-darkPrimaryBg dark:shadow-slate-900  w-[30vw] h-[30vh]">
               <div className="flex items-center ">
                 <h3 className=" font-bold ">Research Contributions</h3>
               </div>
@@ -57,7 +57,7 @@ export default function Achievements() {
                 </strong>
               </div>
             </div>
-            <div className="aaward-card p-5 shadow-lg grounded-lg dark:shadow-slate-900  w-[30vw] h-[30vh] ">
+            <div className="aaward-card p-5 shadow-lg grounded-lg dark:shadow-slate-900 bg-primaryBg dark:bg-darkPrimaryBg w-[30vw] h-[30vh] ">
               <div className="flex items-center ">
                 <h3 className=" font-bold ">Dean's List</h3>
               </div>

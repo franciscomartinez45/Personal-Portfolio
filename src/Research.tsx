@@ -3,30 +3,30 @@ import { motion } from "motion/react";
 export default function Research() {
   return (
     <section
-      className="section-container bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText "
+      className="section-container  text-primaryText dark:text-darkPrimaryText "
       id="research"
     >
       <div className="flex justify-center h-[90vh]">
         <div className="py-16">
-          <h2 className="text-xl font-semibold text-center  dark:text-darkPrimaryText ">
+          <h2 className="text-xl font-semibold text-center  dark:text-darkPrimaryText bg-primaryBg dark:bg-darkPrimaryBg">
             Research Project
           </h2>
           <div className="py-5 px-16 text-[clamp(10px,1.4vw,16px)]">
-            <div className="flex justify-center align-middle">
+            <div className="flex justify-center align-middle bg-primaryBg dark:bg-darkPrimaryBg">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy
                 in Minority Populations"
               </h2>
             </div>
-            <div className="flex justify-center align-middle py-1">
+            <div className="flex justify-center align-middle py-1 bg-primaryBg dark:bg-darkPrimaryBg">
               <strong className="mt-0 text-gray-800 dark:text-darkPrimaryText">
                 California State University, Dominguez Hills
               </strong>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center bg-primaryBg dark:bg-darkPrimaryBg">
               <p>Research Mentor: Dr. Amlan Chatterjee</p>
             </div>
-            <div className="flex justify-center py-5">
+            <div className="flex justify-center py-5 bg-primaryBg dark:bg-darkPrimaryBg">
               <ul className="group list-disc space-y-2">
                 <li>
                   <p>

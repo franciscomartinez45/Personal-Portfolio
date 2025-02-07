@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="section-container bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
+      className=" section-container text-primaryText dark:text-darkPrimaryText"
     >
       <ThemeSwitcher />
       <section className="hero bg-cover  bg-center text-center h-screen  flex items-center justify-center">

@@ -52,7 +52,7 @@ export default function Projects() {
 
   return (
     <section
-      className="section-container overflow-y-scroll bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText"
+      className="section-container overflow-y-scroll  text-primaryText dark:text-darkPrimaryText"
       id="projects"
     >
       <div className="flex justify-center">

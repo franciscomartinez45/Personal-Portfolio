@@ -1,6 +1,6 @@
 export const Menu = () => {
   return (
-    <div className="fixed flex justify-center  z-10 bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText w-[100vw] ">
+    <div className="fixed flex justify-center z-10   bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText w-[100vw] ">
       <div className="flex justify-items-center">
         {sectionRefs.map((section, index) => (
           <div
