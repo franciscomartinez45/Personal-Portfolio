@@ -58,6 +58,7 @@ export default function Skills() {
 const skills = [
   "Python",
   "C++",
+  "C#",
   "Java",
   "React.js",
   "HTML",
@@ -69,7 +70,6 @@ const skills = [
   "Linux-Ubuntu",
   "Agile Methodologies",
   "Problem Solving",
-  "Critical Thinking",
   "Team Collaboration",
   "Time Management",
   "Communication",
