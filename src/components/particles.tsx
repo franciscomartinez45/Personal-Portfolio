@@ -90,10 +90,7 @@ export const ParticleCanvas = () => {
     const drawLine = (x1: number, y1: number, x2: number, y2: number) => {
       context.beginPath();
       context.moveTo(x1, y1);
-      //context.lineTo(x2, y2);
-      //context.quadraticCurveTo(x1, y1, x2, y2);
-      context.bezierCurveTo(x1, y1, x2, y2, x1, y1);
-
+      context.lineTo(x2, y2);
       context.strokeStyle = "rgba(210, 215, 211)";
       context.stroke();
     };
