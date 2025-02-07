@@ -22,6 +22,7 @@ export default function Index() {
           <Skills />
           <Projects />
           <Research />
+
           <Contact />
           <ProgressBar />
         </div>
