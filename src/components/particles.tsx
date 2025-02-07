@@ -1,4 +1,7 @@
 import { useEffect, useRef } from "react";
+const PARTICLE_SIZE = 2.5;
+const NUM_PARTICLES = 150;
+const MAX_DISTANCE = 50;
 
 class Particle {
   x_pos: number;
@@ -13,7 +16,7 @@ class Particle {
     this.y_pos = Math.random() * height;
     this.x_velo = (Math.random() - 0.5) * 3;
     this.y_velo = (Math.random() - 0.5) * 3;
-    this.size = 5;
+    this.size = PARTICLE_SIZE;
   }
   draw(context: CanvasRenderingContext2D) {
     context.beginPath();
@@ -60,8 +63,6 @@ export const ParticleCanvas = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const NUM_PARTICLES = (Math.random() + 0.5) * 30;
-    const MAX_DISTANCE = 100;
     for (let i = 0; i < NUM_PARTICLES; i++) {
       particles.push(new Particle(canvas.width, canvas.height));
     }
@@ -80,6 +81,36 @@ export const ParticleCanvas = () => {
                 particle2.x_pos,
                 particle2.y_pos
               );
+            }
+
+            if (distance <= PARTICLE_SIZE) {
+              const angle = Math.atan2(dy, dx);
+              const sine = Math.sin(angle);
+              const cosine = Math.cos(angle);
+
+              const v1 = {
+                x: particle1.x_velo * cosine + particle1.y_velo * sine,
+                y: particle1.y_velo * cosine - particle1.x_velo * sine,
+              };
+              const v2 = {
+                x: particle2.x_velo * cosine + particle2.y_velo * sine,
+                y: particle2.y_velo * cosine - particle2.x_velo * sine,
+              };
+
+              const tempVx = v1.x;
+              v1.x = v2.x;
+              v2.x = tempVx;
+
+              particle1.x_velo = v1.x * cosine - v1.y * sine;
+              particle1.y_velo = v1.x * sine + v1.y * cosine;
+              particle2.x_velo = v2.x * cosine - v2.y * sine;
+              particle2.y_velo = v2.x * sine + v2.y * cosine;
+
+              const overlap = PARTICLE_SIZE - distance;
+              particle1.x_pos -= overlap * (dx / distance);
+              particle1.y_pos -= overlap * (dy / distance);
+              particle2.x_pos += overlap * (dx / distance);
+              particle2.y_pos += overlap * (dy / distance);
             }
           }
         }
