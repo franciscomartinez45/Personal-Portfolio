@@ -1,8 +1,10 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import dialogflow from "@google-cloud/dialogflow";
+import dotenv from "dotenv";
+dotenv.config({ path: "../.env" });
 
 const sessionClient = new dialogflow.SessionsClient();
-const projectId = "personal-porfolio-450522";
+const projectId = process.env.DIALOGFLOW_PROJECT_ID as string;
 const sessionId = "123456";
 const languageCode = "en";
 
