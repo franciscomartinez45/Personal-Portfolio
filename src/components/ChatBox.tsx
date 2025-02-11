@@ -13,12 +13,9 @@ export const ChatBox = (props: ChatBoxProps) => {
 
   const handleSendMessage = async (message: string) => {
     try {
-      const response = await axios.post(
-        "https://francisco-martinez-45.vercel.app/api/server.ts",
-        {
-          query: message,
-        }
-      );
+      const response = await axios.post("http://localhost:3000/dialogflow", {
+        query: message,
+      });
 
       if (response.status === 200) {
         setMessages((prevMessages) => [
