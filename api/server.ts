@@ -35,8 +35,10 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     return res.json({ fulfillmentText });
   } catch (error) {
     console.error("Error with Dialogflow request:", error);
-    return res
-      .status(500)
-      .json({ error: "Error communicating with Dialogflow" });
+    return res.status(500).json({
+      error: "Error communicating with Dialogflow",
+      message: error.message,
+      stack: error.stack,
+    });
   }
 };
