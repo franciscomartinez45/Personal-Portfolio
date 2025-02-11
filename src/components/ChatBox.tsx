@@ -14,7 +14,7 @@ export const ChatBox = (props: ChatBoxProps) => {
   const handleSendMessage = async (message: string) => {
     try {
       const response = await axios.post(
-        "http://https://francisco-martinez-45.vercel.app/api/server.mjs",
+        "https://francisco-martinez-45.vercel.app/api/server.mjs",
         {
           query: message,
         }
