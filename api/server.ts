@@ -31,8 +31,16 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
   try {
     const responses = await sessionClient.detectIntent(request);
-    const fulfillmentText = responses[0].queryResult?.fulfillmentText || null;
-    return res.json({ fulfillmentText });
+    if (responses && responses[0] && responses[0].queryResult) {
+      const fulfillmentText = responses[0].queryResult.fulfillmentText;
+      console.log("Dialogflow response:", fulfillmentText);
+      return res.json({ fulfillmentText });
+    } else {
+      console.error("No valid response from Dialogflow");
+      return res
+        .status(500)
+        .json({ error: "No valid response from Dialogflow" });
+    }
   } catch (error) {
     console.error("Error with Dialogflow request:", error);
     return res.status(500).json({
