@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+.env
 
+personal-porfolio-450522-e3e2b0a7867b.json

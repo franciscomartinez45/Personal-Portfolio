@@ -24,6 +24,7 @@ export default function Index() {
           <Research />
 
           <Contact />
+
           <ProgressBar />
         </div>
       </div>
