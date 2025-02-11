@@ -1,47 +1,42 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors"; // Import cors
+import { VercelRequest, VercelResponse } from "@vercel/node";
 import dialogflow from "@google-cloud/dialogflow";
-
-const app = express();
-const port = 3000;
-
-app.use(cors());
-
-app.use(bodyParser.json());
 
 const sessionClient = new dialogflow.SessionsClient();
 const projectId = "personal-porfolio-450522";
 const sessionId = "123456";
 const languageCode = "en";
 
-app.post("/dialogflow", async (req, res) => {
+export default async (req: VercelRequest, res: VercelResponse) => {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method Not Allowed" });
+  }
+
   const userQuery = req.body.query;
   const sessionPath = sessionClient.projectAgentSessionPath(
     projectId,
     sessionId
   );
 
+  console.log("User Query:", userQuery);
+
   const request = {
     session: sessionPath,
     queryInput: {
       text: {
         text: userQuery,
-        languageCode: languageCode,
+        languageCode,
       },
     },
   };
 
   try {
     const responses = await sessionClient.detectIntent(request);
-    const fulfillmentText = responses[0].queryResult.fulfillmentText;
-    res.json({ fulfillmentText });
+    const fulfillmentText = responses[0].queryResult?.fulfillmentText || null;
+    return res.json({ fulfillmentText });
   } catch (error) {
     console.error("Error with Dialogflow request:", error);
-    res.status(500).send("Error communicating with Dialogflow");
+    return res
+      .status(500)
+      .json({ error: "Error communicating with Dialogflow" });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+};
