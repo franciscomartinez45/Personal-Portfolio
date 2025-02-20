@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import ThemeSwitcher from "./style/ThemeSwitcher";
-import ChatButton from "./components/ChatButton";
 
 export const scrollToSection = (location: string) => {
   const aboutSection = document.getElementById(location);
@@ -17,7 +16,6 @@ export default function Home() {
     >
       //
       <ThemeSwitcher />
-      <ChatButton />
       <section className="hero bg-cover  bg-center text-center h-screen  flex items-center justify-center">
         <div className=" text-center w-[60vw]">
           <h1 className="text-4xl text-[clamp(10px,5vw,32px)] font-bold ">
