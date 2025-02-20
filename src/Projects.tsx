@@ -16,7 +16,7 @@ export default function Projects() {
   const [loading, setLoading] = useState<boolean>(true);
   const repositories = [
     "Purffect-Health",
-    "Cipher-Care",
+    "Soccer-ML-app",
     "Full-Stack-Web-Application",
     "IceMan",
     "Personal-Portfolio",
