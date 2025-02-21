@@ -88,11 +88,7 @@ export default function Overview() {
                   </a>
                 )}
                 {fact.includes("Resume") && (
-                  <a
-                    href={resumeUrl}
-                    download="FranciscoMartinez_CV.pdf"
-                    target="_blank"
-                  >
+                  <a href={resumeUrl} target="_blank">
                     View Resume
                   </a>
                 )}
