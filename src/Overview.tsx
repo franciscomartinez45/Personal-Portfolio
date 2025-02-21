@@ -9,11 +9,11 @@ export default function Overview() {
   const getBucketData = async () => {
     try {
       const imageCommand = new GetObjectCommand({
-        Bucket: import.meta.env.VITE_BUCKET_NAME,
+        Bucket: import.meta.env.VITE_AWS_BUCKET_NAME,
         Key: import.meta.env.VITE_IMAGE_NAME,
       });
       const resumeCommand = new GetObjectCommand({
-        Bucket: import.meta.env.VITE_BUCKET_NAME,
+        Bucket: import.meta.env.VITE_AWS_BUCKET_NAME,
         Key: import.meta.env.VITE_RESUME_NAME,
       });
       const signedImageUrl = await getSignedUrl(s3, imageCommand, {
@@ -23,8 +23,6 @@ export default function Overview() {
         expiresIn: 3600,
       });
       setResumeUrl(signedResumeUrl);
-      console.log(signedImageUrl);
-      console.log(signedResumeUrl);
       setImageUrl(signedImageUrl);
     } catch (error) {
       console.error("Error fetching signed URL:", error);
@@ -90,7 +88,7 @@ export default function Overview() {
                   </a>
                 )}
                 {fact.includes("Resume") && (
-                  <a href={resumeUrl} target="_blank">
+                  <a href={resumeUrl} download target="_blank">
                     View Resume
                   </a>
                 )}
