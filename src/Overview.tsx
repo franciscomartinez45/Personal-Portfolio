@@ -1,6 +1,37 @@
+import { GetObjectCommand } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { motion } from "motion/react";
-
+import { useEffect, useState } from "react";
+import s3 from "./client/s3client";
 export default function Overview() {
+  const [imageUrl, setImageUrl] = useState<string>("");
+  const [resumeUrl, setResumeUrl] = useState<string>("");
+  const getBucketData = async () => {
+    try {
+      const imageCommand = new GetObjectCommand({
+        Bucket: import.meta.env.VITE_BUCKET_NAME,
+        Key: import.meta.env.VITE_IMAGE_NAME,
+      });
+      const resumeCommand = new GetObjectCommand({
+        Bucket: import.meta.env.VITE_BUCKET_NAME,
+        Key: import.meta.env.VITE_RESUME_NAME,
+      });
+      const signedImageUrl = await getSignedUrl(s3, imageCommand, {
+        expiresIn: 3600,
+      });
+      const signedResumeUrl = await getSignedUrl(s3, resumeCommand, {
+        expiresIn: 3600,
+      });
+      setResumeUrl(signedResumeUrl);
+      setImageUrl(signedImageUrl);
+    } catch (error) {
+      console.error("Error fetching signed URL:", error);
+    }
+  };
+
+  useEffect(() => {
+    getBucketData();
+  }, []);
   return (
     <section
       id="overview"
@@ -8,17 +39,19 @@ export default function Overview() {
     >
       <div className="flex items-center justify-center w-[40vw] ">
         <div className="flex flex-col justify-center items-center ">
-          <div className="flex items-center justify-evenly p-6 mb-6 rounded-lg shadow-lg bg-primaryBg dark:bg-darkPrimaryBg ">
-            <div className=" rounded-full bg-slate-50 mr-6 h-[clamp(18vw,4vw,22vw)] w-[clamp(18vw,4vw,22vw)]"></div>
-            <div className="w-[30vw] ">
-              <h2 className=" font-bold ">Francisco Martinez</h2>
-              <h3 className="">Bachelor of Science, Computer Science</h3>
+          <div className="flex items-center justify-evenly p-6 mb-6">
+            <div className="mr-6 h-[clamp(15vh,36vh,48vh)] w-[clamp(15vh,36vh,48vh)] flex justify-center items-center">
+              {imageUrl && <img src={imageUrl} className="object-contain" />}
+            </div>
+
+            <div className="w-[30vw]">
+              <h2 className="font-bold">Francisco Martinez</h2>
+              <h3>Bachelor of Science, Computer Science</h3>
               <p className="font-light">
                 California State University, Dominguez Hills
               </p>
               <p className="font-light">Carson, CA</p>
-
-              <p className="font-light">April 2021- Dec 2024</p>
+              <p className="font-light">April 2021 - Dec 2024</p>
             </div>
           </div>
           <div className="flex items-center justify-evenly bg-primaryBg dark:bg-darkPrimaryBg p-6 mb-6  rounded-lg shadow-lg  ">
@@ -56,10 +89,11 @@ export default function Overview() {
                 )}
                 {fact.includes("Resume") && (
                   <a
-                    href="/FranciscoMartinez_CV.pdf"
+                    href={resumeUrl}
                     download="FranciscoMartinez_CV.pdf"
+                    target="_blank"
                   >
-                    Download Resume
+                    View Resume
                   </a>
                 )}
               </motion.div>

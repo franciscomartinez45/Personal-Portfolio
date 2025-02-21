@@ -64,8 +64,9 @@ export default function Projects() {
             <p className="text-center">Loading...</p>
           ) : (
             <div className="grid gap-x-[clamp(10px,20px,20px)] grid-cols-2 grid-rows-3 w-[clamp(60vw,50vw,50vw)]">
-              {repos.map((repo) => (
+              {repos.map((repo, index) => (
                 <motion.div
+                  key={index}
                   whileHover={{
                     scale: [null, 1.0, 1.04],
                     transition: {
