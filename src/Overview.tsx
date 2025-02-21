@@ -24,6 +24,8 @@ export default function Overview() {
       });
       setResumeUrl(signedResumeUrl);
       setImageUrl(signedImageUrl);
+      console.log(imageUrl);
+      console.log(resumeUrl);
     } catch (error) {
       console.error("Error fetching signed URL:", error);
     }
