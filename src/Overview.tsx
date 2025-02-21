@@ -23,6 +23,8 @@ export default function Overview() {
         expiresIn: 3600,
       });
       setResumeUrl(signedResumeUrl);
+      console.log(signedImageUrl);
+      console.log(signedResumeUrl);
       setImageUrl(signedImageUrl);
     } catch (error) {
       console.error("Error fetching signed URL:", error);
