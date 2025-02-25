@@ -8,11 +8,11 @@ export default function Contact() {
       className="section-container text-primaryText dark:text-darkPrimaryText"
     >
       <section className="hero bg-cover bg-center text-center h-screen  flex items-center justify-center  ">
-        <div className="text-center w-1/2">
+        <div className="text-center w-1/2 bg-primaryBg dark:bg-darkPrimaryBg">
           <h1 className="text-xl font-bold ">
             Thank you for visiting my portfolio!
           </h1>
-          <p className="text-md  mt-2">
+          <p className="text-md  mt-2 ">
             I am always eager to take on new challenges and collaborate on
             innovative projects. Feel free to reach out—let's create something
             amazing together!
@@ -34,11 +34,21 @@ export default function Contact() {
             </div>
             <div className="px-4 py-2">
               <a
+                className="text-blue-500 font-bold"
+                href="https://www.linkedin.com/in/francisco-martinez-405512218/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+            <div className="px-4 py-2">
+              <a
                 href="/FranciscoMartinez_CV.pdf"
                 download="FranciscoMartinez_CV.pdf"
                 className="text-blue-500 font-bold"
               >
-                Resume
+                View Resume
               </a>
             </div>
           </div>

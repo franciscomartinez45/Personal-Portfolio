@@ -66,7 +66,7 @@ export default function Overview() {
           </div>
 
           <div className="flex justify-evenly  gap-4  w-[50vw] h-[7vh] ">
-            {facts.map((fact, index) => (
+            {links.map((link, index) => (
               <motion.div
                 whileHover={{
                   scale: [null, 1.1, 1.2],
@@ -80,7 +80,7 @@ export default function Overview() {
                 key={index}
                 className="font-bold bg-primaryBg dark:bg-darkPrimaryBg  text-center  flex items-center justify-center p-6 mb-6 rounded-lg shadow-lg"
               >
-                {fact.includes("GitHub") && (
+                {link.includes("GitHub") && (
                   <a
                     href="https://github.com/franciscomartinez45"
                     target="_blank"
@@ -89,7 +89,15 @@ export default function Overview() {
                     GitHub
                   </a>
                 )}
-                {fact.includes("Resume") && (
+                {link.includes("LinkedIn") && (
+                  <a
+                    href="https://www.linkedin.com/in/francisco-martinez-405512218/"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
+                )}
+                {link.includes("Resume") && (
                   <a href={resumeUrl} download target="_blank">
                     View Resume
                   </a>
@@ -103,4 +111,4 @@ export default function Overview() {
   );
 }
 
-const facts: string[] = ["GitHub", "Download Resume"];
+const links: string[] = ["GitHub", "LinkedIn", "Download Resume"];
