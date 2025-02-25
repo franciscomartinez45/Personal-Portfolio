@@ -3,6 +3,21 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import s3 from "./client/s3client";
+export const getResumeUrl = async () => {
+  try {
+    const resumeCommand = new GetObjectCommand({
+      Bucket: import.meta.env.VITE_AWS_BUCKET_NAME,
+      Key: import.meta.env.VITE_RESUME_NAME,
+    });
+    const signedResumeUrl = await getSignedUrl(s3, resumeCommand, {
+      expiresIn: 3600,
+    });
+    return signedResumeUrl;
+  } catch (error) {
+    console.error("Error fetching signed URL:", error);
+  }
+};
+
 export default function Overview() {
   const [imageUrl, setImageUrl] = useState<string>("");
   const [resumeUrl, setResumeUrl] = useState<string>("");
@@ -12,27 +27,29 @@ export default function Overview() {
         Bucket: import.meta.env.VITE_AWS_BUCKET_NAME,
         Key: import.meta.env.VITE_IMAGE_NAME,
       });
-      const resumeCommand = new GetObjectCommand({
-        Bucket: import.meta.env.VITE_AWS_BUCKET_NAME,
-        Key: import.meta.env.VITE_RESUME_NAME,
-      });
+
       const signedImageUrl = await getSignedUrl(s3, imageCommand, {
         expiresIn: 3600,
       });
-      const signedResumeUrl = await getSignedUrl(s3, resumeCommand, {
-        expiresIn: 3600,
-      });
-      setResumeUrl(signedResumeUrl);
+
       setImageUrl(signedImageUrl);
-      console.log(imageUrl);
-      console.log(resumeUrl);
     } catch (error) {
       console.error("Error fetching signed URL:", error);
     }
   };
-
+  const fetchResumeUrl = async () => {
+    try {
+      const resumeUrl = await getResumeUrl();
+      if (resumeUrl) {
+        setResumeUrl(resumeUrl);
+      }
+    } catch (error) {
+      console.log("Error fetching Resume Url");
+    }
+  };
   useEffect(() => {
     getBucketData();
+    fetchResumeUrl();
   }, []);
   return (
     <section

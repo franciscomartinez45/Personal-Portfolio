@@ -1,7 +1,24 @@
 import { motion } from "motion/react";
 import { scrollToSection } from "./Home";
+import { getResumeUrl } from "./Overview";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
+  const [resumeUrl, setResumeUrl] = useState<string>("");
+
+  const fetchResumeUrl = async () => {
+    try {
+      const resumeUrl = await getResumeUrl();
+      if (resumeUrl) {
+        setResumeUrl(resumeUrl);
+      }
+    } catch (error) {
+      console.log("Error fetching Resume Url");
+    }
+  };
+  useEffect(() => {
+    fetchResumeUrl();
+  }, []);
   return (
     <section
       id="contact"
@@ -44,8 +61,8 @@ export default function Contact() {
             </div>
             <div className="px-4 py-2">
               <a
-                href="/FranciscoMartinez_CV.pdf"
-                download="FranciscoMartinez_CV.pdf"
+                href={resumeUrl}
+                target="_blank"
                 className="text-blue-500 font-bold"
               >
                 View Resume
