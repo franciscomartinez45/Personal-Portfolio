@@ -2,7 +2,7 @@ import { GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import s3 from "./client/s3client";
+import s3 from "../client/s3client";
 export const getResumeUrl = async () => {
   try {
     const resumeCommand = new GetObjectCommand({

@@ -1,7 +1,7 @@
-import { Menu } from "./Menu";
-import Index from "./Index";
+import { Menu } from "./pages/Menu";
+import Index from "./pages/Index";
 import "./style/index.css";
-import { ThemeProvider } from "./style/ThemeContext";
+import { ThemeProvider } from "./components/ThemeContext";
 import { Analytics } from "@vercel/analytics/react";
 export const App = () => {
   return (

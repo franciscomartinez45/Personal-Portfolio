@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import ThemeSwitcher from "./style/ThemeSwitcher";
+import ThemeSwitcher from "../components/ThemeSwitcher";
 
 export const scrollToSection = (location: string) => {
   const aboutSection = document.getElementById(location);
