@@ -1,5 +1,5 @@
 import { ThemeProvider } from "../components/ThemeContext";
-import "./style/index.css";
+import "../style/index.css";
 import Home from "./Home";
 import Contact from "./Contact";
 import Projects from "./Projects";
@@ -30,7 +30,4 @@ export default function Index() {
       </div>
     </ThemeProvider>
   );
-}
-export interface windowWidth {
-  width: number;
 }
