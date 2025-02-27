@@ -1,4 +1,4 @@
-import { Menu } from "./pages/Menu";
+import { Menu } from "./components/Menu";
 import Index from "./pages/Index";
 import "./style/index.css";
 import { ThemeProvider } from "./components/ThemeContext";

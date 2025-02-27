@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-const PARTICLE_SIZE = 2.5;
-const NUM_PARTICLES = 150;
-const MAX_DISTANCE = 50;
+const PARTICLE_SIZE = 4;
+const NUM_PARTICLES = 60;
+const MAX_DISTANCE = 100;
 
 class Particle {
   x_pos: number;

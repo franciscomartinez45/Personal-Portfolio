@@ -23,6 +23,7 @@ export const Menu = () => {
 const sectionRefs = [
   "#home",
   "#overview",
+  "#status",
   "#achievements",
   "#skills",
   "#projects",
