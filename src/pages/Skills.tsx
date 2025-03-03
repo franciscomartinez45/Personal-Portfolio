@@ -1,9 +1,14 @@
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
-
+import { useEffect, useRef, useState } from "react";
+import _ from "lodash";
 export default function Skills() {
   const skillsSectionRef = useRef(null);
   const isSkillsInView = useInView(skillsSectionRef, { once: false });
+  const [shuffledList, setShuffledList] = useState<string[]>(skills);
+  useEffect(() => {
+    const shuffledArray = _.shuffle(skills);
+    setShuffledList(shuffledArray);
+  }, []);
   return (
     <section className="section-container text-primaryText dark:text-darkPrimaryText text-[clamp(8px,2vw,12px)]">
       <section
@@ -16,7 +21,7 @@ export default function Skills() {
 
           <div className="flex justify-center items-center py-7">
             <div className="grid grid-cols-4 grid-rows-4  gap-[clamp(25px,1.5rem,40px)]">
-              {skills.map((skill, index) => (
+              {shuffledList.map((skill, index) => (
                 <motion.div
                   initial={{ x: 0, y: 0 }}
                   animate={
@@ -63,17 +68,17 @@ const skills = [
   "React.js",
   "HTML",
   "PyTorch",
-  "PHP",
+  "Scikit-learn",
   "React Native",
   "MySQL",
   "Firebase Firestore",
   "Linux-Ubuntu",
   "Agile Methodologies",
+  "Machine Learning",
   "Problem Solving",
-  "Team Collaboration",
-  "Time Management",
-  "Communication",
-  "Adaptability",
-  "Attention to Detail",
+  "Node.js",
+  "AWS",
+  "XG-Boost Framework",
+  "Serverless Framework",
   "Presentation Skills",
 ];
