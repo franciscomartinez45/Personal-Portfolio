@@ -40,9 +40,11 @@ export default function Overview() {
   const fetchResumeUrl = async () => {
     try {
       const resumeUrl = await getResumeUrl();
+
       if (resumeUrl) {
         setResumeUrl(resumeUrl);
       }
+      console.log(resumeUrl);
     } catch (error) {
       console.log("Error fetching Resume Url");
     }

@@ -77,8 +77,8 @@ const skills = [
   "Machine Learning",
   "Problem Solving",
   "Node.js",
-  "AWS",
+  "Supabase",
   "XG-Boost Framework",
-  "Serverless Framework",
+  "RESTful APIs",
   "Presentation Skills",
 ];

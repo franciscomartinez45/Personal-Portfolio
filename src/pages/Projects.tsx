@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { motion } from "motion/react";
+import RepoExpand from "../components/RepoCard";
 
-interface Repo {
+export interface Repo {
   id: number;
   name: string;
   description: string;
@@ -14,6 +14,7 @@ interface Repo {
 export default function Projects() {
   const [repos, setRepos] = useState<Repo[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+
   const repositories = [
     "Purffect-Health",
     "Soccer-ML-app",
@@ -22,7 +23,6 @@ export default function Projects() {
     "Personal-Portfolio",
     "Graph-Convolutional-Network",
   ];
-  //add filtering
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -63,47 +63,9 @@ export default function Projects() {
           {loading ? (
             <p className="text-center">Loading...</p>
           ) : (
-            <div className="grid gap-x-[clamp(10px,20px,20px)] grid-cols-2 grid-rows-3 w-[clamp(60vw,50vw,50vw)]">
-              {repos.map((repo, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{
-                    scale: [null, 1.0, 1.04],
-                    transition: {
-                      duration: 0.5,
-                      delay: 0,
-                      times: [0, 0.3, 0.5],
-                      ease: ["easeIn", "easeOut"],
-                    },
-                  }}
-                >
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className=" mt-5  inline-block"
-                  >
-                    <div
-                      key={repo.id}
-                      className="shadow-lg text-[clamp(9px,2vw,16px)] rounded-lg p-4 hover:shadow-lg transition bg-primaryBg dark:bg-darkPrimaryBg text-primaryText dark:text-darkPrimaryText shadow-slate-500 dark:shadow-slate-900 hover:bg-secondaryBg dark:hover:bg-darkSecondaryBg"
-                    >
-                      <h3 className="font-bold ">{repo.name}</h3>
-                      <p className="font-light ">
-                        {repo.description || "No description provided."}
-                      </p>
-                      <p className=" mt-2">
-                        <strong>Language:</strong>{" "}
-                        {repo.language || "Not specified"}
-                      </p>
-                      <p className=" font-light mt-0">
-                        <strong className="font-bold">Topics:</strong>
-                        {repo.topics.map((topic) => (
-                          <>{" " + topic + ","}</>
-                        ))}
-                      </p>
-                    </div>
-                  </a>
-                </motion.div>
+            <div className="grid gap-x-[clamp(10px,20px,20px)] columns-2 gap-4 w-[clamp(60vw,50vw,50vw)]">
+              {repos.map((repo) => (
+                <RepoExpand key={repo.id} {...repo} />
               ))}
               ;
             </div>
