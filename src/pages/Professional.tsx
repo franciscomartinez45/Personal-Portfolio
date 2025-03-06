@@ -11,8 +11,8 @@ export function ProfessionalSection() {
           </p>
           <p className="border-t-2 border-secondaryText font-bold">
             Research Assistant (California State University, Dominguez Hills)
-            Fall 2023-Spring 2024
           </p>
+          <p>Fall 2023-Spring 2024</p>
           <p>
             "Addressing Health Disparities through Improved Health Literacy in
             Minority Populations"
