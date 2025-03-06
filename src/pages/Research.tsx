@@ -2,31 +2,29 @@ import { motion } from "motion/react";
 
 export default function Research() {
   return (
-    <section
-      className="section-container  text-primaryText dark:text-darkPrimaryText "
-      id="research"
-    >
+    <section className="section-container " id="research">
       <div className="flex justify-center h-[90vh]">
         <div className="py-16">
-          <h2 className="text-xl font-semibold text-center  dark:text-darkPrimaryText bg-primaryBg dark:bg-darkPrimaryBg">
-            Research Project
+          <h2 className="text-xl font-semibold text-center mb-6 ">
+            RESEARCH CONTRIBUTIONS
           </h2>
-          <div className="py-5 px-16 text-[clamp(10px,1.4vw,16px)]">
-            <div className="flex justify-center align-middle bg-primaryBg dark:bg-darkPrimaryBg">
+          <div className="py-5 px-16 text-[clamp(10px,1.4vw,16px)] bg-secondaryBg text-secondaryText w-3/4 justify-self-center">
+            <div className="flex justify-center align-middle ">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy
                 in Minority Populations"
               </h2>
             </div>
-            <div className="flex justify-center align-middle py-1 bg-primaryBg dark:bg-darkPrimaryBg">
+            <div className="flex justify-center align-middle py-1 ">
               <strong className="mt-0 text-gray-800 dark:text-darkPrimaryText">
-                California State University, Dominguez Hills
+                California State University, Dominguez Hills (Fall 2023 - Spring
+                2024)
               </strong>
             </div>
-            <div className="flex justify-center bg-primaryBg dark:bg-darkPrimaryBg">
+            <div className="flex justify-center ">
               <p>Research Mentor: Dr. Amlan Chatterjee</p>
             </div>
-            <div className="flex justify-center py-5 bg-primaryBg dark:bg-darkPrimaryBg">
+            <div className="flex justify-center py-5 ">
               <ul className="group list-disc space-y-2">
                 <li>
                   <p>
@@ -35,7 +33,7 @@ export default function Research() {
                     networks from{" "}
                     <a
                       href="https://github.com/Bader-Research/GTgraph"
-                      className="text-blue-500 font-bold "
+                      className="text-linkButtonBg font-bold "
                     >
                       GTgraph Suite
                     </a>{" "}
@@ -103,7 +101,7 @@ export default function Research() {
                 whileTap={{ scale: 0.9 }}
                 className=" text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer mt-5 text-[clamp(8px,14px,16px)]"
               >
-                Go to project's Github
+                GitHub Repo
               </motion.div>
             </a>
           </div>

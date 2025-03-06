@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
-const PARTICLE_SIZE = 4;
+const PARTICLE_SIZE = 5;
 const NUM_PARTICLES = 60;
 const MAX_DISTANCE = 100;
+const PARTICLE_COLOR = "rgb(170,170,170)";
 
 class Particle {
   x_pos: number;
@@ -11,7 +12,7 @@ class Particle {
   size: number;
   color: string;
   constructor(width: number, height: number) {
-    this.color = "gray";
+    this.color = PARTICLE_COLOR;
     this.x_pos = Math.random() * width;
     this.y_pos = Math.random() * height;
     this.x_velo = (Math.random() - 0.5) * 3;
@@ -122,7 +123,7 @@ export const ParticleCanvas = () => {
       context.beginPath();
       context.moveTo(x1, y1);
       context.lineTo(x2, y2);
-      context.strokeStyle = "rgba(210, 215, 211)";
+      context.strokeStyle = PARTICLE_COLOR;
       context.stroke();
     };
 

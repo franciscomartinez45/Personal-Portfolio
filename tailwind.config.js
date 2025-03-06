@@ -5,16 +5,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryBg: "#FFFFFF",
-        primaryText: "#333333",
-        secondaryBg: "#F7F7F7",
-        buttonBg: "#4A90E2",
+        primaryBg: "rgb(210, 210, 210)",
+        primaryText: "rgb(240,240,240)",
+        secondaryBg: "rgb(240,240,240)",
+        secondaryText: "rgb(0,0,0)",
+        linkButtonBg: "rgb(33, 150, 243)",
+        buttonBg: "rgb(240,240,240)",
         buttonHoverBg: "#3498DB",
-        darkPrimaryBg: "#2C3E50",
-        darkPrimaryText: "#FFFFFF",
-        darkSecondaryBg: "#34495E",
-        darkButtonBg: "#1F78D1",
-        darkButtonHoverBg: "#1566A4",
       },
     },
   },

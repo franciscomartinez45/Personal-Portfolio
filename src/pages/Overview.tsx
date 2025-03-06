@@ -44,7 +44,6 @@ export default function Overview() {
       if (resumeUrl) {
         setResumeUrl(resumeUrl);
       }
-      console.log(resumeUrl);
     } catch (error) {
       console.log("Error fetching Resume Url");
     }
@@ -56,74 +55,75 @@ export default function Overview() {
   return (
     <section
       id="overview"
-      className="section-container flex items-center justify-center text-primaryText dark:text-darkPrimaryText text-[clamp(5px,2.3vw,17px)]"
+      className="section-container text-[clamp(8px,2vw,16px)]"
     >
-      <div className="flex items-center justify-center w-[40vw] ">
-        <div className="flex flex-col justify-center items-center ">
-          <div className="flex items-center justify-evenly p-6 mb-6">
-            <div className="mr-6 h-[clamp(15vh,36vh,48vh)] w-[clamp(15vh,36vh,48vh)] flex justify-center items-center">
-              {imageUrl && <img src={imageUrl} className="object-contain" />}
-            </div>
+      <div className="py-20 flex flex-col justify-center items-center justify-self-center">
+        <h1 className="text-2xl font-semibold text-secondaryText mb-6 ">
+          ABOUT
+        </h1>
 
-            <div className="w-[30vw]">
-              <h2 className="font-bold">Francisco Martinez</h2>
-              <h3>Bachelor of Science, Computer Science</h3>
-              <p className="font-light">
-                California State University, Dominguez Hills
-              </p>
-              <p className="font-light">Carson, CA</p>
-              <p className="font-light">April 2021 - Dec 2024</p>
-            </div>
+        <div className="flex items-center justify-evenly mb-6 p-6 bg-secondaryBg  text-secondaryText rounded-xl w-[50vw]">
+          <div className="mr-6 flex justify-center items-center ">
+            {imageUrl && (
+              <img
+                src={imageUrl}
+                className="object-contain rounded-xl w-[25vw]"
+              />
+            )}
           </div>
-          <div className="flex items-center justify-evenly bg-primaryBg dark:bg-darkPrimaryBg p-6 mb-6  rounded-lg shadow-lg  ">
-            <p className="italic">
-              Aspiring Software Engineer with hands-on experience developing
-              React.js, React Native and Java full-stack applications ranging
-              from pet care mobile apps to healthcare management systems and
-              personal portfolios.
+
+          <div className="">
+            <h2 className="font-medium mb-4">Francisco Martinez</h2>
+            <h3>Bachelor of Science, Computer Science</h3>
+            <p className="font-normal">
+              California State University, Dominguez Hills
             </p>
+            <p className="font-normal">Carson, CA</p>
+            <p className="font-normal">April 2021 - Dec 2024</p>
           </div>
+        </div>
+        <div className="flex items-center justify-evenly bg-secondaryBg text-secondaryText p-6 mb-6  rounded-lg shadow-lg w-[50vw] ">
+          <p className="">
+            I am an Aspiring Software Engineer with hands-on experience
+            developing personal projects React.js, React Native. I have
+            knowledge and proficiency cleaning data for Machine Learning models.
+            Currently, I am hosting this site on Vercel and have a mobile
+            application used as a capstone project hosted on Expo.
+          </p>
+        </div>
 
-          <div className="flex justify-evenly  gap-4  w-[50vw] h-[7vh] ">
-            {links.map((link, index) => (
-              <motion.div
-                whileHover={{
-                  scale: [null, 1.1, 1.2],
-                  transition: {
-                    duration: 0.7,
-                    delay: 0,
-                    times: [0, 0.3, 0.7],
-                    ease: ["easeIn", "easeOut"],
-                  },
-                }}
-                key={index}
-                className="font-bold bg-primaryBg dark:bg-darkPrimaryBg  text-center  flex items-center justify-center p-6 mb-6 rounded-lg shadow-lg"
-              >
-                {link.includes("GitHub") && (
-                  <a
-                    href="https://github.com/franciscomartinez45"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                )}
-                {link.includes("LinkedIn") && (
-                  <a
-                    href="https://www.linkedin.com/in/francisco-martinez-405512218/"
-                    target="_blank"
-                  >
-                    LinkedIn
-                  </a>
-                )}
-                {link.includes("Resume") && (
-                  <a href={resumeUrl} download target="_blank">
-                    View Resume
-                  </a>
-                )}
-              </motion.div>
-            ))}
-          </div>
+        <div className="flex justify-evenly  gap-4 w-[40vw] ">
+          {links.map((link, index) => (
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className=" text-center py-3 w-[25vw]  bg-linkButtonBg text-darkPrimaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
+              key={index}
+            >
+              {link.includes("GitHub") && (
+                <a
+                  href="https://github.com/franciscomartinez45"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              )}
+              {link.includes("LinkedIn") && (
+                <a
+                  href="https://www.linkedin.com/in/francisco-martinez-405512218/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>
+              )}
+              {link.includes("Resume") && (
+                <a href={resumeUrl} download target="_blank">
+                  View Resume
+                </a>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

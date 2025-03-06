@@ -15,7 +15,7 @@ interface Updates {
   update_timestamp: string;
   updateid: number;
 }
-export default function Status() {
+export default function Blog() {
   const [projects, setProjects] = useState<Projects[]>([]);
   useEffect(() => {
     getProjects();
@@ -29,25 +29,19 @@ export default function Status() {
   };
 
   return (
-    <section
-      id="status"
-      className="section-container text-primaryText dark:text-darkPrimaryText"
-    >
-      <div className="flex justify-center h-[90vh]">
+    <section id="status" className="section-container ">
+      <div className="flex justify-center h-[90vh] overflow-hidden">
         <div className="py-16">
-          <h2 className="text-xl font-semibold text-center mb-10 bg-primaryBg dark:bg-darkPrimaryBg dark:text-darkPrimaryText">
-            Current Projects
-          </h2>
+          <h1 className="text-2xl font-semibold text-center mb-10 text-secondaryText">
+            Blog
+          </h1>
 
-          <div className="grid gap-x-[clamp(10px,20px,20px)] grid-cols-2 grid-rows-3 w-[clamp(60vw,50vw,50vw)]">
+          <div className="grid gap-x-[clamp(10px,20px,20px)] grid-cols-2 grid-rows-3 w-[clamp(60vw,50vw,50vw)] overflow-scroll bg-secondaryBg text-secondaryText">
             {projects.map((project) => (
-              <div
-                key={project.projectid}
-                className="bg-primaryBg dark:bg-darkPrimaryBg m-3"
-              >
+              <div key={project.projectid} className="m-3">
                 <strong>{project.project_name}</strong>
                 <p>{project.project_description}</p>
-                <ul className="mt-5">
+                <ul className="mt-5 ml-4">
                   {project.projectupdate.map((update) => (
                     <>
                       <li className="font-bold  list-decimal ">
