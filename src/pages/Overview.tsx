@@ -53,27 +53,22 @@ export default function OverviewSection() {
     fetchResumeUrl();
   }, []);
   return (
-    <section
-      id="overview"
-      className="section-container text-[clamp(8px,2vw,16px)]"
-    >
+    <section id="overview" className="section-container ">
       <div className="py-20 flex flex-col justify-center items-center justify-self-center">
-        <h1 className="text-2xl font-semibold text-secondaryText mb-6 ">
-          ABOUT
-        </h1>
+        <h1 className="font-semibold text-secondaryText mb-6 ">ABOUT</h1>
 
-        <div className="flex items-center justify-evenly mb-6 p-6 bg-secondaryBg  text-secondaryText rounded-xl w-[50vw]">
-          <div className="mr-6 flex justify-center items-center ">
+        <div className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)] bg-secondaryBg  text-secondaryText rounded-xl w-[90vw] lg:w-[40vw]">
+          <div className="mr-[clamp(0px,24px,24px)] flex justify-center items-center ">
             {imageUrl && (
               <img
                 src={imageUrl}
-                className="object-contain rounded-xl w-[25vw]"
+                className="object-contain rounded-xl w-[45vw] lg:w-[15vw] "
               />
             )}
           </div>
 
-          <div className="">
-            <h2 className="font-medium text-lg">
+          <div className=" text-[clamp(12px,2vw,14px)]">
+            <h2 className="">
               <strong>Francisco Martinez</strong>
             </h2>
             <h3>Bachelor of Science, Computer Science</h3>
@@ -84,7 +79,7 @@ export default function OverviewSection() {
             <p className="font-normal">Aug 2023 - Dec 2024</p>
           </div>
         </div>
-        <div className="flex items-center justify-evenly bg-secondaryBg text-secondaryText p-6 mb-6  rounded-lg shadow-lg w-[50vw] ">
+        <div className="flex items-center justify-evenly bg-secondaryBg  text-[clamp(12px,2vw,14px)] text-secondaryText p-6 mb-6  rounded-lg shadow-lg w-[90vw] lg:w-[40vw]">
           <p className="">
             I am an Aspiring Software Engineer with hands-on experience
             developing personal projects React.js, React Native. I have
@@ -94,12 +89,12 @@ export default function OverviewSection() {
           </p>
         </div>
 
-        <div className="flex justify-evenly  gap-4 w-[40vw] ">
+        <div className="flex justify-evenly gap-4 w-[80vw] lg:w-[40vw]">
           {links.map((link, index) => (
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className=" text-center py-3 w-[25vw]  bg-linkButtonBg text-primaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
+              className=" text-center text-[clamp(10px,1.2vw,14px)] py-3 w-[25vw]  bg-linkButtonBg text-primaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
               key={index}
             >
               {link.includes("GitHub") && (

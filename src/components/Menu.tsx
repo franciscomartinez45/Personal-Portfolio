@@ -1,15 +1,15 @@
 export const Menu = () => {
   return (
-    <div className="fixed flex justify-center z-10  text-secondaryText w-[100vw]">
-      <div className="flex justify-items-center">
+    <div className="flex justify-center">
+      <div className="flex justify-items-center fixed text-secondaryText z-10">
         {sectionRefs.map((section, index) => (
           <div
-            className="text-center py-3 hover:bg-primaryBg w-[clamp(12vw,12vw,14vw)] bg-secondaryBg border-r-2 p-3"
+            className="text-center  hover:bg-primaryBg w-[14vw] lg:w-[6vw] bg-secondaryBg border-r-2 py-3"
             key={index}
           >
             <a
               href={section}
-              className="block font-semibold overflow-hidden text-[clamp(8px,1.2vw,16px)]"
+              className="block font-semibold overflow-hidden text-[clamp(8px,1.2vw,14px)]"
             >
               {section.replace("#", "").toUpperCase()}
             </a>

@@ -23,7 +23,7 @@ export default function SkillCard(props: Skills) {
     >
       <div
         key={props.skillName}
-        className="shadow-lg text-[clamp(9px,2vw,16px)] rounded-lg p-4 hover:shadow-lg transition "
+        className="shadow-lg  rounded-lg p-4 hover:shadow-lg transition "
       >
         <h3 className="font-bold ">{props.skillName}</h3>
         <AnimatePresence>

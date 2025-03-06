@@ -21,8 +21,8 @@ export default function ContactSection() {
   }, []);
   return (
     <section id="contact" className="section-container text-secondaryText ">
-      <section className="hero bg-cover bg-center text-center h-screen  flex items-center justify-center  ">
-        <div className="text-center w-1/2 bg-primaryBg dark:bg-darkPrimaryBg">
+      <section className="hero bg-cover bg-center text-center h-screen flex items-center justify-center  ">
+        <div className="text-center w-[90vw] lg:w-[30vw] bg-primaryBg dark:bg-darkPrimaryBg">
           <h1 className="text-xl font-bold ">
             Thank you for visiting my portfolio!
           </h1>

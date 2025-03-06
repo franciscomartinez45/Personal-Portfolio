@@ -2,14 +2,14 @@ export function ProfessionalSection() {
   return (
     <section id="experience" className="section-container">
       <div className=" flex flex-col justify-center items-center justify-self-center">
-        <h1 className="text-2xl font-semibold text-secondaryText mb-6 mt-20">
+        <h1 className=" font-semibold text-secondaryText mb-6 mt-20">
           EXPERIENCE
         </h1>
-        <div className="rounded-lg bg-secondaryBg text-secondaryText w-[55vw] p-6 text-[clamp(10px,1.4vw,12px)] overflow-hidden">
-          <p className="pb-2">
-            <strong>Professional Experience:</strong>
+        <div className="rounded-lg bg-secondaryBg text-secondaryText w-[95vw] lg:w-[45vw] p-6 text-[clamp(9px,1.4vw,12px)] overflow-hidden">
+          <p className=" border-y-2 border-secondaryText">
+            <strong>PROFESSIONAL EXPERIENCE:</strong>
           </p>
-          <p className="border-t-2 border-secondaryText font-bold">
+          <p className=" font-bold">
             Research Assistant (California State University, Dominguez Hills)
           </p>
           <p>Fall 2023-Spring 2024</p>
@@ -32,12 +32,10 @@ export function ProfessionalSection() {
               train predictive models
             </li>
           </ul>
-          <p className="pb-2">
-            <strong>Employment History:</strong>
+          <p className="border-y-2 border-secondaryText">
+            <strong>EMPLOYMENT HISTORY:</strong>
           </p>
-          <p className="border-t-2 border-secondaryText font-bold">
-            Costco Business Center
-          </p>
+          <p className=" font-bold">Costco Business Center</p>
           <p>April 2021 - Present</p>
           <p>
             As a Merchandising employee, I have taken multiple roles within the
@@ -63,7 +61,7 @@ export function ProfessionalSection() {
               operational success
             </li>
           </ul>
-          <p className="border-t-2 border-secondaryText font-bold">
+          <p className="border-t-2 border-dotted border-slate-500 font-bold">
             The Home Depot : Department Supervisor
           </p>
           <p>October 2019-April 2021</p>

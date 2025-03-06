@@ -2,13 +2,13 @@ import { motion } from "motion/react";
 
 export default function ResearchSection() {
   return (
-    <section className="section-container " id="research">
-      <div className="flex justify-center h-[90vh]">
+    <section className="section-container h-[90vh] " id="research">
+      <div className="flex justify-center ">
         <div className="py-20">
-          <h2 className="text-xl font-semibold text-center mb-6 ">
+          <h2 className="font-semibold text-center mb-6 ">
             RESEARCH CONTRIBUTIONS
           </h2>
-          <div className="rounded-lg py-5 px-16 text-[clamp(10px,1.4vw,14px)] bg-secondaryBg text-secondaryText w-[60vw] justify-self-center">
+          <div className="rounded-lg  text-[clamp(10px,2vw,14px)] bg-secondaryBg text-secondaryText w-[95vw] lg:w-[50vw] px-10 py-6 justify-self-center">
             <div className="flex justify-center align-middle ">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy
@@ -24,8 +24,8 @@ export default function ResearchSection() {
             <div className="flex justify-center ">
               <p>Research Mentor: Dr. Amlan Chatterjee</p>
             </div>
-            <div className="flex justify-center py-5 ">
-              <ul className="group list-disc space-y-2">
+            <div className="flex justify-center  ">
+              <ul className="group list-disc space-y-2 py-3">
                 <li>
                   <p>
                     Designed and implemented a custom Graph Convolutional

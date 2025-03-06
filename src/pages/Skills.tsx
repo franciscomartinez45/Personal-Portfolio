@@ -7,24 +7,23 @@ export interface Skills {
 
 export default function SkillsSection() {
   return (
-    <section
-      id="skills"
-      className="section-container text-secondaryText  text-[clamp(8px,2vw,14px)]"
-    >
+    <section id="skills" className="section-container text-secondaryText ">
       <div className="">
-        <h1 className="text-2xl font-semibold text-center mb-5 pt-20 text-secondaryText">
+        <h1 className=" font-semibold text-center mb-5 pt-20 text-secondaryText">
           SKILLS
         </h1>
-        <div className="bg-secondaryBg text-secondaryText justify-center items-center w-[50vw] justify-self-center p-4 mb-4 rounded-md">
-          <h1 className="font-semibold">
-            Throughout my academic career, I have developed highly demanded
-            industry skills within the following sections
-          </h1>
-        </div>
-        <div className="bg-secondaryBg rounded-lg text-secondaryText overflow-hidden grid grid-cols-2 justify-center items-center w-[50vw] justify-self-center">
-          {skills.map((skill) => (
-            <SkillCard key={skill.skillName} {...skill}></SkillCard>
-          ))}
+        <div className=" text-[clamp(12px,2vw,14px)]">
+          <div className="bg-secondaryBg   text-secondaryText justify-center items-center w-[80vw] lg:w-[40vw] justify-self-center p-4 mb-4 rounded-md">
+            <h1 className="">
+              Throughout my academic career, I have developed highly demanded
+              industry skills within the following sections
+            </h1>
+          </div>
+          <div className="bg-secondaryBg  rounded-lg text-secondaryText overflow-hidden grid grid-cols-2 justify-center items-center w-[80vw] lg:w-[40vw] justify-self-center">
+            {skills.map((skill) => (
+              <SkillCard key={skill.skillName} {...skill}></SkillCard>
+            ))}
+          </div>
         </div>
       </div>
     </section>
