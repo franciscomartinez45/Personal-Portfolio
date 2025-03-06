@@ -8,7 +8,7 @@ export default function ResearchSection() {
           <h2 className="text-xl font-semibold text-center mb-6 ">
             RESEARCH CONTRIBUTIONS
           </h2>
-          <div className="py-5 px-16 text-[clamp(10px,1.4vw,16px)] bg-secondaryBg text-secondaryText w-[60vw] justify-self-center">
+          <div className="rounded-lg py-5 px-16 text-[clamp(10px,1.4vw,14px)] bg-secondaryBg text-secondaryText w-[60vw] justify-self-center">
             <div className="flex justify-center align-middle ">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy

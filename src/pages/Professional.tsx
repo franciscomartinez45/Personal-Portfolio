@@ -5,7 +5,7 @@ export function ProfessionalSection() {
         <h1 className="text-2xl font-semibold text-secondaryText mb-6 mt-20">
           EXPERIENCE
         </h1>
-        <div className="bg-secondaryBg text-secondaryText w-[55vw] p-6 text-[clamp(10px,1.4vw,12px)] overflow-hidden">
+        <div className="rounded-lg bg-secondaryBg text-secondaryText w-[55vw] p-6 text-[clamp(10px,1.4vw,12px)] overflow-hidden">
           <p className="pb-2">
             <strong>Professional Experience:</strong>
           </p>

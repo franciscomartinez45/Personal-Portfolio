@@ -73,13 +73,15 @@ export default function OverviewSection() {
           </div>
 
           <div className="">
-            <h2 className="font-medium mb-4">Francisco Martinez</h2>
+            <h2 className="font-medium text-lg">
+              <strong>Francisco Martinez</strong>
+            </h2>
             <h3>Bachelor of Science, Computer Science</h3>
             <p className="font-normal">
               California State University, Dominguez Hills
             </p>
             <p className="font-normal">Carson, CA</p>
-            <p className="font-normal">April 2021 - Dec 2024</p>
+            <p className="font-normal">Aug 2023 - Dec 2024</p>
           </div>
         </div>
         <div className="flex items-center justify-evenly bg-secondaryBg text-secondaryText p-6 mb-6  rounded-lg shadow-lg w-[50vw] ">
