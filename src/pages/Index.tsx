@@ -1,28 +1,28 @@
 import "../style/index.css";
-import Home from "./Home";
-import Contact from "./Contact";
+import HomeSection from "./Home";
+import ContactSection from "./Contact";
 
-import Skills from "./Skills";
-import Education from "./Education";
+import SkillsSection from "./Skills";
+import EducationSection from "./Education";
 import ProgressBar from "../components/ProgressBar";
-import Research from "./Research";
-import Overview from "./Overview";
+import ResearchSection from "./Research";
+
+import OverviewSection from "./Overview";
 import { ParticleCanvas } from "../components/particles";
+import { ProfessionalSection } from "./Professional";
 
 export default function Index() {
   return (
     <div style={{ position: "relative", width: "100%", height: "100vh" }}>
       <ParticleCanvas></ParticleCanvas>
       <div style={{ position: "relative", zIndex: 1 }}>
-        <Home />
-        <Overview />
-
-        {/* <Blog /> */}
-        <Education />
-        <Skills />
-
-        <Research />
-        <Contact />
+        <HomeSection />
+        <OverviewSection />
+        <EducationSection />
+        <ResearchSection />
+        <SkillsSection />
+        <ProfessionalSection />
+        <ContactSection />
         <ProgressBar />
       </div>
     </div>

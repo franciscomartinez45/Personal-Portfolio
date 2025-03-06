@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export default function Research() {
+export default function ResearchSection() {
   return (
     <section className="section-container " id="research">
       <div className="flex justify-center h-[90vh]">

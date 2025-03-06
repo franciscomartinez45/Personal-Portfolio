@@ -5,7 +5,7 @@ export interface Skills {
   tools: string[];
 }
 
-export default function Skills() {
+export default function SkillsSection() {
   return (
     <section
       id="skills"

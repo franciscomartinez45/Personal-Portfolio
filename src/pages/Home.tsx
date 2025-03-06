@@ -7,7 +7,7 @@ export const scrollToSection = (location: string) => {
   }
 };
 
-export default function Home() {
+export default function HomeSection() {
   return (
     <section id="home" className=" section-container ">
       //

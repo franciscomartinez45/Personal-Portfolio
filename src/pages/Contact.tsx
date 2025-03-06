@@ -3,7 +3,7 @@ import { scrollToSection } from "./Home";
 import { getResumeUrl } from "./Overview";
 import { useEffect, useState } from "react";
 
-export default function Contact() {
+export default function ContactSection() {
   const [resumeUrl, setResumeUrl] = useState<string>("");
 
   const fetchResumeUrl = async () => {

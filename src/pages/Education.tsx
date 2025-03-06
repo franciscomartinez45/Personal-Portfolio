@@ -1,8 +1,8 @@
-export default function Education() {
+export default function EducationSection() {
   return (
     <section
-      id="achievements"
-      className="section-container text-primaryText text-[clamp(8px,2vw,15px)]"
+      id="education"
+      className="section-container text-primaryText text-[clamp(10px,1.4vw,14px)]"
     >
       <div className="py-20 flex flex-col justify-center items-center w-[50vw] justify-self-center">
         <h1 className="text-2xl font-semibold text-center mb-5 text-secondaryText">

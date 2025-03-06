@@ -18,7 +18,7 @@ export const getResumeUrl = async () => {
   }
 };
 
-export default function Overview() {
+export default function OverviewSection() {
   const [imageUrl, setImageUrl] = useState<string>("");
   const [resumeUrl, setResumeUrl] = useState<string>("");
   const getBucketData = async () => {
@@ -97,7 +97,7 @@ export default function Overview() {
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className=" text-center py-3 w-[25vw]  bg-linkButtonBg text-darkPrimaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
+              className=" text-center py-3 w-[25vw]  bg-linkButtonBg text-primaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
               key={index}
             >
               {link.includes("GitHub") && (
