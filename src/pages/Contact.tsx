@@ -20,10 +20,7 @@ export default function Contact() {
     fetchResumeUrl();
   }, []);
   return (
-    <section
-      id="contact"
-      className="section-container text-primaryText dark:text-darkPrimaryText"
-    >
+    <section id="contact" className="section-container text-secondaryText ">
       <section className="hero bg-cover bg-center text-center h-screen  flex items-center justify-center  ">
         <div className="text-center w-1/2 bg-primaryBg dark:bg-darkPrimaryBg">
           <h1 className="text-xl font-bold ">
@@ -41,7 +38,7 @@ export default function Contact() {
           <div className="flex justify-center ">
             <div className="px-4 py-2">
               <a
-                className="text-blue-500 font-bold"
+                className="text-linkButtonBg font-bold"
                 href="https://github.com/franciscomartinez45"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,7 +48,7 @@ export default function Contact() {
             </div>
             <div className="px-4 py-2">
               <a
-                className="text-blue-500 font-bold"
+                className="text-linkButtonBg font-bold"
                 href="https://www.linkedin.com/in/francisco-martinez-405512218/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,7 +60,7 @@ export default function Contact() {
               <a
                 href={resumeUrl}
                 target="_blank"
-                className="text-blue-500 font-bold"
+                className="text-linkButtonBg font-bold"
               >
                 View Resume
               </a>
@@ -72,7 +69,7 @@ export default function Contact() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className=" text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer mt-5  justify-right"
+            className=" text-center px-6 py-3 bg-linkButtonBg text-white font-semibold rounded shadow-lg cursor-pointer mt-5  justify-right"
             onClick={() => scrollToSection("home")}
           >
             Back to top

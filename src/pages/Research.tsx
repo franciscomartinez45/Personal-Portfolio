@@ -4,11 +4,11 @@ export default function Research() {
   return (
     <section className="section-container " id="research">
       <div className="flex justify-center h-[90vh]">
-        <div className="py-16">
+        <div className="py-20">
           <h2 className="text-xl font-semibold text-center mb-6 ">
             RESEARCH CONTRIBUTIONS
           </h2>
-          <div className="py-5 px-16 text-[clamp(10px,1.4vw,16px)] bg-secondaryBg text-secondaryText w-3/4 justify-self-center">
+          <div className="py-5 px-16 text-[clamp(10px,1.4vw,16px)] bg-secondaryBg text-secondaryText w-[60vw] justify-self-center">
             <div className="flex justify-center align-middle ">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy
@@ -16,7 +16,7 @@ export default function Research() {
               </h2>
             </div>
             <div className="flex justify-center align-middle py-1 ">
-              <strong className="mt-0 text-gray-800 dark:text-darkPrimaryText">
+              <strong className="mt-0 text-secondaryText">
                 California State University, Dominguez Hills (Fall 2023 - Spring
                 2024)
               </strong>
@@ -99,7 +99,7 @@ export default function Research() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className=" text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded shadow-lg cursor-pointer mt-5 text-[clamp(8px,14px,16px)]"
+                className=" text-center px-6 py-3 bg-linkButtonBg text-white font-semibold rounded shadow-lg cursor-pointer mt-5 text-[clamp(8px,14px,16px)]"
               >
                 GitHub Repo
               </motion.div>
