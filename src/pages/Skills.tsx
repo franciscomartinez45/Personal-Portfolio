@@ -38,7 +38,7 @@ const skills: Skills[] = [
     tools: ["Java", "C++", "Python"],
   },
   {
-    skillName: "Web Developement Frameworks",
+    skillName: "Web Development Frameworks",
     tools: ["React.js", "React Native", "Node.js", "Expo", "Vite"],
   },
 
@@ -54,10 +54,6 @@ const skills: Skills[] = [
     ],
   },
 
-  {
-    skillName: "Web Developement",
-    tools: ["HMTL", "CSS", "JavaScript", "TypeScript", "PHP"],
-  },
   { skillName: "Methodology", tools: ["Agile", "Scrum"] },
   {
     skillName: "Authentication",
