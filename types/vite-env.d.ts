@@ -8,6 +8,8 @@ interface ImportMetaEnv {
   VITE_AWS_SECRET_KEY: string;
   VITE_IMAGE_NAME: string;
   VITE_RESUME_NAME: string;
+  VITE_SUPABASE_URL: string;
+  VITE_SUPABASE_ANON_KEY: string;
 }
 
 interface ImportMeta {

@@ -1,63 +1,48 @@
-import { useState, useEffect } from "react";
-import { supabase } from "../supabase/client";
-import dayjs from "dayjs";
+import { useEffect, useState } from "react";
+import { supabase } from "../supabase/client.ts";
+import { format } from "date-fns";
 
-interface Projects {
-  project_description: string;
-  project_link: string;
-  project_name: string;
-  projectid: number;
-  projectupdate: Updates[];
+interface Update {
+  id: number;
+  title: string;
+  description: string;
+  created_at: string;
 }
-interface Updates {
-  projectid: number;
-  update_description: string;
-  update_timestamp: string;
-  updateid: number;
-}
-export default function Blog() {
-  const [projects, setProjects] = useState<Projects[]>([]);
+
+export function Updates() {
+  const [updates, setUpdates] = useState<Update[]>([]);
   useEffect(() => {
-    getProjects();
+    const fetchData = async () => {
+      const { data, error } = await supabase.from("updates").select();
+      if (error) {
+        return;
+      }
+      console.log(data);
+      setUpdates(data || []);
+    };
+    fetchData();
   }, []);
 
-  const getProjects = async () => {
-    const { data: projects } = await supabase
-      .from("project")
-      .select("*, projectupdate(*)");
-    setProjects(projects || []);
-  };
-
   return (
-    <section id="status" className="section-container ">
-      <div className="flex justify-center h-[90vh] overflow-hidden">
-        <div className="py-16">
-          <h1 className="text-2xl font-semibold text-center mb-10 text-secondaryText">
-            Blog
-          </h1>
-
-          <div className="grid gap-x-[clamp(10px,20px,20px)] grid-cols-2 grid-rows-3 w-[clamp(60vw,50vw,50vw)] overflow-scroll bg-secondaryBg text-secondaryText">
-            {projects.map((project) => (
-              <div key={project.projectid} className="m-3">
-                <strong>{project.project_name}</strong>
-                <p>{project.project_description}</p>
-                <ul className="mt-5 ml-4">
-                  {project.projectupdate.map((update) => (
-                    <>
-                      <li className="font-bold  list-decimal ">
-                        {update.update_description}
-                      </li>
-                      <p>
-                        {dayjs(update.update_timestamp).format(
-                          "D MMM YYYY @ hh:mm A"
-                        )}
-                      </p>
-                    </>
-                  ))}
-                </ul>
+    <section id="blog" className="section-container ">
+      <div className=" flex flex-col justify-center items-center justify-self-center  w-[90vw] lg:w-[40vw]  ">
+        <h1 className=" font-semibold text-secondaryText mb-6 mt-20">BLOG</h1>
+        <div className="overflow-y-auto  text-[clamp(10px,2vw,14px)]">
+          <ul>
+            {updates.map((update) => (
+              <div key={update.id} className="rounded-lg bg-secondaryBg">
+                <div className="p-4 ">
+                  <h2 className="font-bold ">{update.title}</h2>
+                  <p className="font-light">
+                    {format(new Date(update.created_at), "PPPppp")}
+                  </p>
+                  <p className="border-t-2 border-double border-secondaryText">
+                    {update.description}
+                  </p>
+                </div>
               </div>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

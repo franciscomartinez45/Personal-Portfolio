@@ -10,7 +10,6 @@ export const scrollToSection = (location: string) => {
 export default function HomeSection() {
   return (
     <section id="home" className=" section-container ">
-      //
       <section className="hero bg-cover  bg-center text-center h-screen  flex items-center justify-center">
         <div className=" text-center w-[90vw] lg:w-[35vw]">
           <h1 className=" text-[clamp(18px,5vw,32px)] font-bold ">

@@ -4,7 +4,7 @@ export const Menu = () => {
       <div className="flex justify-items-center fixed text-secondaryText z-10">
         {sectionRefs.map((section, index) => (
           <div
-            className="text-center  hover:bg-primaryBg w-[14vw] lg:w-[6vw] bg-secondaryBg border-r-2 py-3"
+            className="text-center  hover:bg-primaryBg w-[12vw] lg:w-[6vw] bg-secondaryBg border-r-2 py-3"
             key={index}
           >
             <a
@@ -24,6 +24,7 @@ const sectionRefs = [
   "#home",
   "#overview",
   "#education",
+  "#blog",
   "#research",
   "#skills",
   "#experience",

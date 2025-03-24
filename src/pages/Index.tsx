@@ -10,6 +10,7 @@ import ResearchSection from "./Research";
 import OverviewSection from "./Overview";
 import { ParticleCanvas } from "../components/particles";
 import { ProfessionalSection } from "./Professional";
+import { Updates } from "./Blog";
 
 export default function Index() {
   return (
@@ -19,6 +20,7 @@ export default function Index() {
         <HomeSection />
         <OverviewSection />
         <EducationSection />
+        <Updates />
         <ResearchSection />
         <SkillsSection />
         <ProfessionalSection />
