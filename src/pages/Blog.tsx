@@ -24,13 +24,16 @@ export function Updates() {
   }, []);
 
   return (
-    <section id="blog" className="section-container ">
+    <section id="blog" className="section-container text-headerFontColor">
       <div className=" flex flex-col justify-center items-center justify-self-center  w-[90vw] lg:w-[40vw]  ">
         <h1 className=" font-semibold text-secondaryText mb-6 mt-20">BLOG</h1>
         <div className="overflow-y-auto  text-[clamp(10px,2vw,14px)]">
           <ul>
             {updates.map((update) => (
-              <div key={update.id} className="rounded-lg bg-secondaryBg">
+              <div
+                key={update.id}
+                className="rounded-lg bg-cardBackground border-b-2 shadow-lg p-6 lg:p-8"
+              >
                 <div className="p-4 ">
                   <h2 className="font-bold ">{update.title}</h2>
                   <p className="font-light">

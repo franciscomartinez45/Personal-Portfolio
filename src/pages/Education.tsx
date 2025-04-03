@@ -2,21 +2,21 @@ export default function EducationSection() {
   return (
     <section id="education" className="section-container text-primaryText  ">
       <div className="flex justify-center ">
-        <div className="py-20 flex flex-col justify-center items-center w-[90vw] lg:w-[40vw] justify-self-center">
-          <h1 className=" font-semibold text-center mb-5 text-secondaryText">
+        <div className="py-20 flex flex-col justify-center items-center w-[90vw] lg:w-[40vw] justify-self-center ">
+          <h1 className=" font-semibold text-center mb-5 text-secondaryText text-headerFontColor">
             EDUCATION
           </h1>
           <div className="text-[clamp(11px,2vw,14px)]  ">
-            <div className="shadow-lg rounded-lg p-6 lg:p-8 bg-secondaryBg text-secondaryText   mb-5">
+            <div className="shadow-lg rounded-lg p-6 lg:p-8 bg-cardBackground mb-5 ">
               <h3 className="">
                 As a student at{" "}
-                <strong className="">
+                <strong className="text-headerFontColor">
                   California State University, Dominguez Hills{" "}
                 </strong>
                 (Fall 2023-Fall 2024), I received numerous recognitions and
                 awards for an outstanding academic performance such as:
               </h3>
-              <p className="mt-2">
+              <p className="mt-2 text-headerFontColor">
                 <strong>Honor Rolls:</strong>{" "}
               </p>
               <ul className="ml-6 list-disc">
@@ -24,13 +24,13 @@ export default function EducationSection() {
                 <li>Spring 2024</li>
                 <li>Fall 2024</li>
               </ul>
-              <p className="mt-2">
+              <p className="mt-2 text-headerFontColor">
                 <strong>Scholarships:</strong>
               </p>
               <ul className="ml-6 list-disc">
                 <li>Edison International STEM Scholarship (Fall 2024)</li>
               </ul>
-              <p className="mt-2">
+              <p className="mt-2 text-headerFontColor">
                 <strong>Research Contribution:</strong>
               </p>
               <ul className="ml-6 list-disc">
@@ -40,8 +40,8 @@ export default function EducationSection() {
                 </li>
               </ul>
             </div>
-            <div className="shadow-lg rounded-lg p-6 lg:p-8  bg-secondaryBg text-secondaryText   lg:w-[40vw]">
-              <h3 className="">
+            <div className="shadow-lg rounded-lg p-6 lg:p-8 bg-cardBackground  lg:w-[40vw]">
+              <h3 className="text-headerFontColor">
                 <strong>El Camino Community College </strong>
                 (Summer 2021-Spring 2023)
               </h3>
@@ -49,7 +49,7 @@ export default function EducationSection() {
                 During my time at this institution, I was recognized and
                 received multiple certifications with Honors{" "}
               </p>
-              <p className="mt-2">
+              <p className="mt-2 text-headerFontColor">
                 <strong>Certificates:</strong>
               </p>
               <ul className="ml-6 list-disc">
@@ -61,7 +61,7 @@ export default function EducationSection() {
                   CSU General Education Certificate With Honors (Fall 2022)
                 </li>
               </ul>
-              <p className="mt-2">
+              <p className="mt-2 text-headerFontColor">
                 <strong>Deans Lists:</strong>
               </p>
               <ul className="ml-6 list-disc">

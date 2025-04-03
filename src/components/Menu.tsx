@@ -1,10 +1,10 @@
 export const Menu = () => {
   return (
     <div className="flex justify-center">
-      <div className="flex justify-items-center fixed text-secondaryText z-10">
+      <div className="flex justify-items-center fixed text-primaryText z-10">
         {sectionRefs.map((section, index) => (
           <div
-            className="text-center  hover:bg-primaryBg w-[12vw] lg:w-[6vw] bg-secondaryBg border-r-2 py-3"
+            className="text-center  hover:border-b-2 hover:border-black w-[12vw] lg:w-[6vw] bg-primaryBg  py-3  "
             key={index}
           >
             <a

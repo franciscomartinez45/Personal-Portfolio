@@ -5,18 +5,18 @@ export default function ResearchSection() {
     <section className="section-container h-[90vh] " id="research">
       <div className="flex justify-center ">
         <div className="py-20">
-          <h2 className="font-semibold text-center mb-6 ">
+          <h2 className="font-semibold text-center mb-6 text-headerFontColor">
             RESEARCH CONTRIBUTIONS
           </h2>
-          <div className="rounded-lg  text-[clamp(10px,2vw,14px)] bg-secondaryBg text-secondaryText w-[95vw] lg:w-[50vw] px-10 py-6 justify-self-center">
-            <div className="flex justify-center align-middle ">
+          <div className="rounded-lg  text-[clamp(10px,2vw,14px)] bg-cardBackground text-secondaryText w-[95vw] lg:w-[50vw] px-10 py-6 justify-self-center border-2 border-borderColor">
+            <div className="flex justify-center align-middle text-headerFontColor">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy
                 in Minority Populations"
               </h2>
             </div>
             <div className="flex justify-center align-middle py-1 ">
-              <strong className="mt-0 text-secondaryText">
+              <strong className="mt-0 text-headerFontColor">
                 California State University, Dominguez Hills (Fall 2023 - Spring
                 2024)
               </strong>

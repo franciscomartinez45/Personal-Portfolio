@@ -22,8 +22,8 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section-container text-secondaryText ">
       <section className="hero bg-cover bg-center text-center h-screen flex items-center justify-center  ">
-        <div className="text-center w-[90vw] lg:w-[30vw] bg-primaryBg dark:bg-darkPrimaryBg">
-          <h1 className="text-xl font-bold ">
+        <div className="text-center w-[90vw] lg:w-[30vw] bg-primaryBg ">
+          <h1 className="text-xl font-bold text-headerFontColor">
             Thank you for visiting my portfolio!
           </h1>
           <p className="text-md  mt-2 ">
@@ -31,7 +31,9 @@ export default function ContactSection() {
             innovative projects. Feel free to reach out—let's create something
             amazing together!
           </p>
-          <p className="text-xl  mt-2 italic font-bold">Francisco Martinez</p>
+          <p className="text-xl  mt-2 italic font-bold text-headerFontColor">
+            Francisco Martinez
+          </p>
           <p className="text-xl  mt-2 italic">
             francisco.martinez-dev@outlook.com
           </p>

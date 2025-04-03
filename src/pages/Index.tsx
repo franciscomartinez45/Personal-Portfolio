@@ -8,25 +8,22 @@ import ProgressBar from "../components/ProgressBar";
 import ResearchSection from "./Research";
 
 import OverviewSection from "./Overview";
-import { ParticleCanvas } from "../components/particles";
+
 import { ProfessionalSection } from "./Professional";
 import { Updates } from "./Blog";
 
 export default function Index() {
   return (
-    <div style={{ position: "relative", width: "100%", height: "100vh" }}>
-      <ParticleCanvas></ParticleCanvas>
-      <div style={{ position: "relative", zIndex: 1 }}>
-        <HomeSection />
-        <OverviewSection />
-        <EducationSection />
-        <Updates />
-        <ResearchSection />
-        <SkillsSection />
-        <ProfessionalSection />
-        <ContactSection />
-        <ProgressBar />
-      </div>
+    <div className="bg-primaryBg w-full h-full text-primaryText">
+      <HomeSection />
+      <OverviewSection />
+      <EducationSection />
+      <Updates />
+      <ResearchSection />
+      <SkillsSection />
+      <ProfessionalSection />
+      <ContactSection />
+      <ProgressBar />
     </div>
   );
 }

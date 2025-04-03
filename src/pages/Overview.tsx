@@ -55,9 +55,9 @@ export default function OverviewSection() {
   return (
     <section id="overview" className="section-container ">
       <div className="py-20 flex flex-col justify-center items-center justify-self-center">
-        <h1 className="font-semibold text-secondaryText mb-6 ">ABOUT</h1>
+        <h1 className="font-semibold mb-6 text-headerFontColor">ABOUT</h1>
 
-        <div className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)] bg-secondaryBg  text-secondaryText rounded-xl w-[90vw] lg:w-[40vw]">
+        <div className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)] bg-secondaryBg  text-secondaryText rounded-xl w-[90vw] lg:w-[40vw]  bg-cardBackground">
           <div className="mr-[clamp(0px,24px,24px)] flex justify-center items-center ">
             {imageUrl && (
               <img
@@ -68,18 +68,18 @@ export default function OverviewSection() {
           </div>
 
           <div className=" text-[clamp(12px,2vw,14px)]">
-            <h2 className="">
+            <h2 className="text-headerFontColor">
               <strong>Francisco Martinez</strong>
             </h2>
-            <h3>Bachelor of Science, Computer Science</h3>
-            <p className="font-normal">
-              California State University, Dominguez Hills
+            <h3>Master of Computer Science Student</h3>
+            <p className="font-bold text-headerFontColor">
+              University of California, Irvine
             </p>
-            <p className="font-normal">Carson, CA</p>
-            <p className="font-normal">Aug 2023 - Dec 2024</p>
+            <p className="font-normal">Irvine, CA</p>
+            <p className="font-light">Sept 2025 - Dec 2026</p>
           </div>
         </div>
-        <div className="flex items-center justify-evenly bg-secondaryBg  text-[clamp(12px,2vw,14px)] text-secondaryText p-6 mb-6  rounded-lg shadow-lg w-[90vw] lg:w-[40vw]">
+        <div className="flex items-center justify-evenly bg-secondaryBg  text-[clamp(12px,2vw,14px)]  p-6 mb-6  rounded-lg shadow-lg w-[90vw] lg:w-[40vw] bg-cardBackground">
           <p className="">
             I am an Aspiring Software Engineer with hands-on experience
             developing personal projects React.js, React Native. I have
@@ -94,7 +94,7 @@ export default function OverviewSection() {
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className=" text-center text-[clamp(10px,1.2vw,14px)] py-3 w-[25vw]  bg-linkButtonBg text-primaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
+              className=" text-center text-[clamp(10px,1.2vw,14px)] py-3 w-[25vw]  bg-linkButtonBg text-primaryBg  font-semibold rounded shadow-lg cursor-pointer mt-5  "
               key={index}
             >
               {link.includes("GitHub") && (

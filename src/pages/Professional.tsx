@@ -2,14 +2,14 @@ export function ProfessionalSection() {
   return (
     <section id="experience" className="section-container">
       <div className=" flex flex-col justify-center items-center justify-self-center">
-        <h1 className=" font-semibold text-secondaryText mb-6 mt-20">
+        <h1 className=" font-semibold text-headerFontColor mb-6 mt-20">
           EXPERIENCE
         </h1>
-        <div className="rounded-lg bg-secondaryBg text-secondaryText w-[95vw] lg:w-[45vw] p-6 text-[clamp(9px,1.4vw,12px)] overflow-hidden">
-          <p className=" border-y-2 border-secondaryText">
+        <div className="rounded-lg bg-cardBackground text-headerFontColor w-[95vw] lg:w-[45vw] p-6 text-[clamp(9px,1.4vw,12px)] overflow-hidden">
+          <p className=" border-y-2 text-headerFontColor">
             <strong>PROFESSIONAL EXPERIENCE:</strong>
           </p>
-          <p className=" font-bold">
+          <p className=" font-bold text-headerFontColor">
             Research Assistant (California State University, Dominguez Hills)
           </p>
           <p>Fall 2023-Spring 2024</p>
@@ -32,10 +32,12 @@ export function ProfessionalSection() {
               train predictive models
             </li>
           </ul>
-          <p className="border-y-2 border-secondaryText">
+          <p className="border-y-2 text-headerFontColor">
             <strong>EMPLOYMENT HISTORY:</strong>
           </p>
-          <p className=" font-bold">Costco Business Center</p>
+          <p className=" font-bold text-headerFontColor">
+            Costco Business Center
+          </p>
           <p>April 2021 - Present</p>
           <p>
             As a Merchandising employee, I have taken multiple roles within the
@@ -61,8 +63,11 @@ export function ProfessionalSection() {
               operational success
             </li>
           </ul>
-          <p className="border-t-2 border-dotted border-slate-500 font-bold">
-            The Home Depot : Department Supervisor
+          <p className="text-headerFontColor font-bold">
+            The Home Depot Department Supervisor
+          </p>
+          <p className="text-headerFontColor font-bold">
+            Department Supervisor (various)
           </p>
           <p>October 2019-April 2021</p>
           <p>

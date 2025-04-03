@@ -5,24 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryBg: "rgb(210, 210, 210)",
-        primaryText: "rgb(240,240,240)",
-        secondaryBg: "rgb(240,240,240)",
-        secondaryText: "rgb(0,0,0)",
-        linkButtonBg: "rgb(33, 150, 243)",
-        buttonBg: "rgb(240,240,240)",
+        primaryBg: "#fdfefe ",
+        primaryText: "#515a5a ",
+        linkButtonBg: "#2C3930",
+        cardBackground: "#f4f6f6",
         buttonHoverBg: "#3498DB",
+        headerFontColor: "#17202a",
       },
     },
   },
-  plugins: [
-    function ({ addBase, theme }) {
-      addBase({
-        ":root": {
-          "--primary-text": theme("colors.primaryText"),
-          "--secondary-text": theme("colors.darkPrimaryText"),
-        },
-      });
-    },
-  ],
+  plugins: [],
 };
