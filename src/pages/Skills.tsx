@@ -67,5 +67,5 @@ const skills: Skills[] = [
   },
 
   { skillName: "Collaboration Tools", tools: ["Git", "GitHub", "Trello"] },
-  { skillName: "Deployment", tools: ["Vercel", "Expo"] },
+  { skillName: "Deployment", tools: ["Vercel", "Expo", "GitHub Actions"] },
 ];

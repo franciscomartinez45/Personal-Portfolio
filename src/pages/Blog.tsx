@@ -25,9 +25,9 @@ export function Updates() {
 
   return (
     <section id="blog" className="section-container text-headerFontColor">
-      <div className=" flex flex-col justify-center items-center justify-self-center  w-[90vw] lg:w-[40vw]  ">
-        <h1 className=" font-semibold text-secondaryText mb-6 mt-20">BLOG</h1>
-        <div className="overflow-y-auto  text-[clamp(10px,2vw,14px)]">
+      <div className=" flex flex-col justify-center items-center justify-self-center w-[90vw] lg:w-[40vw]  ">
+        <h1 className=" font-semibold mb-6 mt-20">BLOG</h1>
+        <div className="overflow-y-auto text-[clamp(10px,2vw,14px)]">
           <ul>
             {updates.map((update) => (
               <div
