@@ -14,6 +14,7 @@ export function ProfessionalSection() {
           <motion.div
             initial={"initial"}
             whileHover={"hover"}
+            whileTap={"hover"}
             whileInView={"inView"}
             variants={{
               hover: { scale: 1.05, opacity: 1 },
