@@ -12,7 +12,6 @@ interface Update {
 
 export function Updates() {
   const [updates, setUpdates] = useState<Update[]>([]);
-  const [updatesReady, setUpdatesReady] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
