@@ -9,10 +9,7 @@ import { motion } from "framer-motion";
 
 export default function HomeSection() {
   return (
-    <section
-      id="introduction"
-      className="relative section-container h-screen  "
-    >
+    <section id="intro" className="relative section-container h-screen  ">
       <motion.div
         className="absolute inset-0  bg-contain bg-center"
         initial={{ scale: 1.1 }}
@@ -28,7 +25,7 @@ export default function HomeSection() {
         transition={{ duration: 4 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-[clamp(18px,5vw,68px)] font-extrabold bg-clip-text text-black bg-center">
+        <h1 className="text-[clamp(18px,5vw,55px)] font-extrabold bg-clip-text text-black bg-center">
           Francisco Martinez
         </h1>
         <p className="text-[clamp(14px,2.0vw,48px)] mt-2 text-black">

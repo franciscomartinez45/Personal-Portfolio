@@ -11,9 +11,9 @@ export default function EducationSection() {
           <h1 className=" font-semibold text-center mb-5 text-secondaryText text-headerFontColor">
             EDUCATION
           </h1>
-          <div className="text-[clamp(11px,2vw,14px)]  ">
+          <div className="text-[clamp(11px,2vw,12px)]  ">
             <motion.div
-              className="rounded-lg p-6 lg:p-8  mb-5 "
+              className="rounded-lg w-[80vw] lg:w-[40vw] mb-6 "
               initial={{ x: "100%" }}
               whileInView={{ x: "0%" }}
               transition={{ duration: 3 }}
@@ -52,7 +52,7 @@ export default function EducationSection() {
               </ul>
             </motion.div>
             <motion.div
-              className=" p-6 lg:p-8   lg:w-[40vw]"
+              className=" w-[80vw] lg:w-[40vw]"
               initial={{ x: "-100%" }}
               whileInView={{ x: "0%" }}
               transition={{ duration: 3 }}
