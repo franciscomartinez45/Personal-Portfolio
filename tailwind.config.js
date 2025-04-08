@@ -5,8 +5,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryBg: "#fdfefe ",
-        primaryText: "#515a5a ",
+        primaryBg: "#fdfefe",
+        secondaryBg: "#000000",
+        primaryText: "#515a5a",
         linkButtonBg: "#2C3930",
         cardBackground: "#f4f6f6",
         buttonHoverBg: "#3498DB",

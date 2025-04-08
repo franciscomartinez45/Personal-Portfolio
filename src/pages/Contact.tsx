@@ -20,7 +20,7 @@ export default function ContactSection() {
     fetchResumeUrl();
   }, []);
   return (
-    <section id="contact" className="section-container text-secondaryText ">
+    <section id="contact" className="section-container  ">
       <section className="hero bg-cover bg-center text-center h-screen flex items-center justify-center  ">
         <div className="text-center w-[90vw] lg:w-[30vw] bg-primaryBg ">
           <h1 className="text-xl font-bold text-headerFontColor">
@@ -72,7 +72,7 @@ export default function ContactSection() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className=" text-center px-6 py-3 bg-linkButtonBg text-white font-semibold rounded shadow-lg cursor-pointer mt-5  justify-right"
-            onClick={() => scrollToSection("home")}
+            onClick={() => scrollToSection("introduction")}
           >
             Back to top
           </motion.div>

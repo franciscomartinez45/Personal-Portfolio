@@ -53,11 +53,20 @@ export default function OverviewSection() {
     fetchResumeUrl();
   }, []);
   return (
-    <section id="overview" className="section-container ">
+    <section
+      id="overview"
+      className="section-container bg-white/10 backdrop-blur-sm "
+    >
       <div className="py-20 flex flex-col justify-center items-center justify-self-center">
         <h1 className="font-semibold mb-6 text-headerFontColor">ABOUT</h1>
 
-        <div className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)] bg-secondaryBg  text-secondaryText rounded-xl w-[90vw] lg:w-[40vw]  bg-cardBackground">
+        <motion.div
+          className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)]  w-[90vw] lg:w-[40vw]  "
+          initial={{ x: "-100%" }}
+          whileInView={{ x: "0%" }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true }}
+        >
           <div className="mr-[clamp(0px,24px,24px)] flex justify-center items-center ">
             {imageUrl && (
               <img
@@ -78,53 +87,70 @@ export default function OverviewSection() {
             <p className="font-normal">Irvine, CA</p>
             <p className="font-light">Sept 2025 - Dec 2026</p>
           </div>
-        </div>
-        <div className="flex items-center justify-evenly bg-secondaryBg  text-[clamp(12px,2vw,14px)]  p-6 mb-6  rounded-lg shadow-lg w-[90vw] lg:w-[40vw] bg-cardBackground">
+        </motion.div>
+        <motion.div
+          className="flex items-center justify-evenly text-[clamp(12px,2vw,14px)]  p-6 mb-6   w-[90vw] lg:w-[40vw] "
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <p className="">
             I am an Aspiring Software Engineer with hands-on experience
             developing personal projects React.js, React Native. I have
             knowledge and proficiency cleaning data for Machine Learning models.
-            Currently, I am hosting this site on Vercel and have a mobile
-            application used as a capstone project hosted on Expo.
+            I will be attending UCI's Master of Computer Science Program this
+            upcoming fall.
           </p>
-        </div>
+        </motion.div>
 
         <div className="flex justify-evenly gap-4 w-[80vw] lg:w-[40vw]">
-          {links.map((link, index) => (
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className=" text-center text-[clamp(10px,1.2vw,14px)] py-3 w-[25vw]  bg-linkButtonBg text-primaryBg  font-semibold rounded shadow-lg cursor-pointer mt-5  "
-              key={index}
-            >
-              {link.includes("GitHub") && (
-                <a
-                  href="https://github.com/franciscomartinez45"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
+          {links.map((link, index) => {
+            const linkToUse =
+              link.name === "Resume" && resumeUrl ? resumeUrl : link.link;
+            return (
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                whileHover="hover"
+                whileTap="tap"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { y: 0 },
+                  visible: {
+                    y: [0, -40, 0],
+                    transition: { duration: 0.7, delay: (index + 1) * 0.3 },
+                  },
+                  hover: { scale: 1.1, transition: { delay: 0 } },
+                  tap: { scale: 0.9, transition: { delay: 0 } },
+                }}
+                className=" text-center text-[clamp(10px,1.2vw,14px)] py-3 w-[25vw]  bg-linkButtonBg text-primaryBg  font-semibold rounded shadow-lg cursor-pointer mt-5  "
+                key={index}
+              >
+                <a href={linkToUse} target="_blank">
+                  {link.name}
                 </a>
-              )}
-              {link.includes("LinkedIn") && (
-                <a
-                  href="https://www.linkedin.com/in/francisco-martinez-405512218/"
-                  target="_blank"
-                >
-                  LinkedIn
-                </a>
-              )}
-              {link.includes("Resume") && (
-                <a href={resumeUrl} download target="_blank">
-                  View Resume
-                </a>
-              )}
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+interface Links {
+  name: string;
+  link: string;
+}
 
-const links: string[] = ["GitHub", "LinkedIn", "Download Resume"];
+const links: Links[] = [
+  { name: "GitHub", link: "https://github.com/franciscomartinez45" },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/francisco-martinez-405512218/",
+  },
+  {
+    name: "Resume",
+    link: "",
+  },
+];

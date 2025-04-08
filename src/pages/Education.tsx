@@ -1,13 +1,24 @@
+import { motion } from "motion/react";
+
 export default function EducationSection() {
   return (
-    <section id="education" className="section-container text-primaryText  ">
+    <section
+      id="education"
+      className="section-container text-primaryText bg-white/10 backdrop-blur-sm  "
+    >
       <div className="flex justify-center ">
         <div className="py-20 flex flex-col justify-center items-center w-[90vw] lg:w-[40vw] justify-self-center ">
           <h1 className=" font-semibold text-center mb-5 text-secondaryText text-headerFontColor">
             EDUCATION
           </h1>
           <div className="text-[clamp(11px,2vw,14px)]  ">
-            <div className="shadow-lg rounded-lg p-6 lg:p-8 bg-cardBackground mb-5 ">
+            <motion.div
+              className="rounded-lg p-6 lg:p-8  mb-5 "
+              initial={{ x: "100%" }}
+              whileInView={{ x: "0%" }}
+              transition={{ duration: 3 }}
+              viewport={{ once: true }}
+            >
               <h3 className="">
                 As a student at{" "}
                 <strong className="text-headerFontColor">
@@ -39,9 +50,15 @@ export default function EducationSection() {
                   Literacy in Minority Populations"
                 </li>
               </ul>
-            </div>
-            <div className="shadow-lg rounded-lg p-6 lg:p-8 bg-cardBackground  lg:w-[40vw]">
-              <h3 className="text-headerFontColor">
+            </motion.div>
+            <motion.div
+              className=" p-6 lg:p-8   lg:w-[40vw]"
+              initial={{ x: "-100%" }}
+              whileInView={{ x: "0%" }}
+              transition={{ duration: 3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-headerFontColor ">
                 <strong>El Camino Community College </strong>
                 (Summer 2021-Spring 2023)
               </h3>
@@ -68,7 +85,7 @@ export default function EducationSection() {
                 <li>Fall 2021</li>
                 <li>Spring 2022</li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

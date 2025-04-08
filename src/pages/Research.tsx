@@ -2,7 +2,10 @@ import { motion } from "motion/react";
 
 export default function ResearchSection() {
   return (
-    <section className="section-container h-[90vh] " id="research">
+    <section
+      className="section-container h-[90vh] bg-white/10 backdrop-blur-sm "
+      id="research"
+    >
       <div className="flex justify-center ">
         <div className="py-20">
           <h2 className="font-semibold text-center mb-6 text-headerFontColor">

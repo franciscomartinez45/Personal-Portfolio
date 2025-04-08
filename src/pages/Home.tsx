@@ -5,30 +5,37 @@ export const scrollToSection = (location: string) => {
   }
 };
 
+import { motion } from "framer-motion";
+
 export default function HomeSection() {
   return (
-    <section id="home" className=" section-container  ">
-      <section className="hero bg-cover  bg-center text-center h-screen  flex items-center justify-center">
-        <div className=" text-center w-[90vw] lg:w-[35vw]">
-          <h1 className=" text-[clamp(18px,5vw,32px)] font-bold text-headerFontColor">
-            Francisco Martinez
-          </h1>
-          <p className="text-[clamp(14px,2.0vw,18px)] mt-2">
-            Incoming Master of Computer Science student at University of
-            California, Irvine
-          </p>
-          {/* <div className="flex justify-center">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className=" text-center py-3 w-[75vw] lg:w-[35vw] text-[clamp(6px,3vw,16px)] bg-linkButtonBg text-primaryText  font-semibold rounded shadow-lg cursor-pointer mt-5 "
-              onClick={() => scrollToSection("overview")}
-            >
-              Continue to Overview
-            </motion.div>
-          </div> */}
-        </div>
-      </section>
+    <section
+      id="introduction"
+      className="relative section-container h-screen  "
+    >
+      <motion.div
+        className="absolute inset-0  bg-contain bg-center"
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 4 }}
+        viewport={{ once: true }}
+      ></motion.div>
+
+      <motion.div
+        className="absolute inset-0 flex flex-col justify-center items-center text-center bg-white/10 backdrop-blur-sm z-1"
+        initial={{ y: "100%" }}
+        animate={{ y: "0%" }}
+        transition={{ duration: 4 }}
+        viewport={{ once: true }}
+      >
+        <h1 className="text-[clamp(18px,5vw,68px)] font-extrabold bg-clip-text text-black bg-center">
+          Francisco Martinez
+        </h1>
+        <p className="text-[clamp(14px,2.0vw,48px)] mt-2 text-black">
+          Incoming Master of Computer Science student at University of
+          California, Irvine
+        </p>
+      </motion.div>
     </section>
   );
 }
