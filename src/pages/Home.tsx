@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function HomeSection() {
   return (
-    <section id="intro" className="relative section-container h-screen  ">
+    <section id="welcome" className="relative section-container h-screen  ">
       <motion.div
         className="absolute inset-0  bg-contain bg-center"
         initial={{ scale: 1.1 }}

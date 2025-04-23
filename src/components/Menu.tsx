@@ -21,7 +21,7 @@ export const Menu = () => {
 };
 
 const sectionRefs = [
-  "#intro",
+  "#welcome",
   "#overview",
   "#education",
   "#research",
