@@ -7,7 +7,6 @@ import ProgressBar from "../components/ProgressBar";
 import ResearchSection from "./Research";
 import OverviewSection from "./Overview";
 import { ProfessionalSection } from "./Professional";
-import { Updates } from "./Blog";
 import VantaBackground from "../components/VantaBackground";
 
 export default function Index() {
@@ -17,7 +16,7 @@ export default function Index() {
       <HomeSection />
       <OverviewSection />
       <EducationSection />
-      <Updates />
+
       <ResearchSection />
       <SkillsSection />
       <ProfessionalSection />

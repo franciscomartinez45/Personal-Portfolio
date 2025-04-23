@@ -24,7 +24,6 @@ const sectionRefs = [
   "#intro",
   "#overview",
   "#education",
-  "#blog",
   "#research",
   "#skills",
   "#experience",
