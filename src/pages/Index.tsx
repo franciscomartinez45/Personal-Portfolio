@@ -16,7 +16,6 @@ export default function Index() {
       <HomeSection />
       <OverviewSection />
       <EducationSection />
-
       <ResearchSection />
       <SkillsSection />
       <ProfessionalSection />
