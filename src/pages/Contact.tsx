@@ -72,7 +72,7 @@ export default function ContactSection() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className=" text-center px-6 py-3 bg-linkButtonBg text-white font-semibold rounded shadow-lg cursor-pointer mt-5  justify-right"
-            onClick={() => scrollToSection("intro")}
+            onClick={() => scrollToSection("welcome")}
           >
             Back to top
           </motion.div>
