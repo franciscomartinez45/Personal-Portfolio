@@ -35,7 +35,7 @@ export default function ContactSection() {
             Francisco Martinez
           </p>
           <p className="text-xl  mt-2 italic">
-            francisco.martinez-dev@outlook.com
+            francm2@uci.edu
           </p>
           <div className="flex justify-center ">
             <div className="px-4 py-2">
