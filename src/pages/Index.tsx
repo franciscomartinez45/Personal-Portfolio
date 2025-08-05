@@ -12,7 +12,7 @@ import { ProfessionalSection } from "./Professional";
 export default function Index() {
   return (
     <div className="bg-primaryBg w-full h-full text-primaryText">
-      <div className="bg-[url('../assets/Background.jpg')] sm:bg-[size:400px_800px] md:bg-cover lg:bg-cover   bg-no-repeat bg-center  bg-fixed">
+      <div className=" bg-[url('../assets/Background.jpg')] bg-cover  bg-no-repeat bg-center  bg-fixed">
       <HomeSection />
       <OverviewSection />
       <EducationSection />
