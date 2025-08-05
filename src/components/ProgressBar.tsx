@@ -14,7 +14,7 @@ export default function ProgressBar() {
         height: 25,
         originX: 0,
         backgroundColor: "black",
-        opacity: 0.5,
+       
       }}
     />
   );
