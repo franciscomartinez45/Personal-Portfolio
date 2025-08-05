@@ -57,11 +57,11 @@ export default function OverviewSection() {
       id="overview"
       className="section-container  "
     >
-      <div className="py-20 flex flex-col justify-center items-center justify-self-center ">
+      <div className="py-20 flex flex-col justify-center items-center justify-self-center  ">
         <h1 className="font-semibold mb-6 text-headerFontColor">ABOUT</h1>
 
         <motion.div
-          className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)]  w-[90vw] lg:w-[40vw] bg-white/10 backdrop-blur-lg "
+          className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)]  w-[90vw] rounded-lg lg:w-[40vw] bg-white/10 backdrop-blur-sm "
           initial={{ x: "-100%" }}
           whileInView={{ x: "0%" }}
           transition={{ duration: 2 }}
@@ -76,12 +76,12 @@ export default function OverviewSection() {
             )}
           </div>
 
-          <div className=" text-[clamp(12px,2vw,14px)]">
-            <h2 className="text-headerFontColor">
+          <div className=" text-[clamp(12px,2vw,14px)] text-primaryText">
+            <h1 className="">
               <strong>Francisco Martinez</strong>
-            </h2>
+            </h1>
             <h3>Master of Computer Science Student</h3>
-            <p className="font-bold text-headerFontColor">
+            <p className="font-bold ">
               University of California, Irvine
             </p>
             <p className="font-normal">Irvine, CA</p>
@@ -89,7 +89,7 @@ export default function OverviewSection() {
           </div>
         </motion.div>
         <motion.div
-          className="flex items-center justify-evenly text-[clamp(12px,2vw,14px)]  p-6 mb-6   w-[90vw] lg:w-[40vw] bg-white/10 backdrop-blur-lg "
+          className="flex items-center justify-evenly text-[clamp(12px,2vw,14px)] rounded-lg  p-6 mb-6   w-[90vw] lg:w-[40vw] bg-white/10 backdrop-blur-lg "
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
@@ -124,7 +124,7 @@ export default function OverviewSection() {
                   hover: { scale: 1.1, transition: { delay: 0 } },
                   tap: { scale: 0.9, transition: { delay: 0 } },
                 }}
-                className=" text-center text-[clamp(10px,1.2vw,14px)] py-3 w-[25vw]  bg-linkButtonBg text-primaryBg  font-semibold rounded shadow-lg cursor-pointer mt-5  "
+                className=" text-center text-[clamp(10px,1.2vw,14px)] py-3 w-[25vw]  bg-linkButtonBg text-buttonText font-semibold rounded shadow-lg cursor-pointer mt-5  "
                 key={index}
               >
                 <a href={linkToUse} target="_blank">

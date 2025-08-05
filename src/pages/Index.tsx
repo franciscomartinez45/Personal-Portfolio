@@ -7,12 +7,12 @@ import ProgressBar from "../components/ProgressBar";
 import ResearchSection from "./Research";
 import OverviewSection from "./Overview";
 import { ProfessionalSection } from "./Professional";
-import VantaBackground from "../assets/VantaBackground";
+
 
 export default function Index() {
   return (
     <div className="bg-primaryBg w-full h-full text-primaryText">
-      <VantaBackground />
+      <div className="bg-[url('../assets/Background.jpg')]   bg-no-repeat bg-center bg-cover bg-fixed w-full">
       <HomeSection />
       <OverviewSection />
       <EducationSection />
@@ -21,6 +21,7 @@ export default function Index() {
       <ProfessionalSection />
       <ContactSection />
       <ProgressBar />
+      </div>
     </div>
   );
 }

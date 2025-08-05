@@ -7,11 +7,12 @@ export default {
       colors: {
         primaryBg: "#fdfefe",
         secondaryBg: "#000000",
-        primaryText: "#515a5a",
-        linkButtonBg: "#2C3930",
+        primaryText: "#EDE8D0",
+        buttonText:"#000000",
+        linkButtonBg: "	#e4d5b7",
         cardBackground: "#f4f6f6",
         buttonHoverBg: "#3498DB",
-        headerFontColor: "#17202a",
+      
       },
     },
   },

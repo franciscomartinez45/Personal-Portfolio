@@ -1,4 +1,4 @@
-declare module "vanta/dist/*" {
-  const vanta: any;
-  export default vanta;
+declare module "animated-backgrounds/dist/*" {
+  const AnimatedBackground: any;
+  export default AnimatedBackground;
 }

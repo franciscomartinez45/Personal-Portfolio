@@ -20,10 +20,10 @@ export default function ContactSection() {
     fetchResumeUrl();
   }, []);
   return (
-    <section id="contact" className="section-container  ">
+    <section id="contact" className="section-container text-primaryText ">
       <section className="hero bg-cover bg-center text-center h-screen flex items-center justify-center  ">
-        <div className="text-center w-[90vw] lg:w-[30vw] bg-white/10 backdrop-blur-sm  ">
-          <h1 className="text-xl font-bold text-headerFontColor">
+        <div className="text-center w-[90vw] lg:w-[30vw]  ">
+          <h1 className="text-xl font-bold ">
             Thank you for visiting my portfolio!
           </h1>
           <p className="text-md  mt-2 ">
@@ -31,7 +31,7 @@ export default function ContactSection() {
             innovative projects. Feel free to reach out—let's create something
             amazing together!
           </p>
-          <p className="text-xl  mt-2 italic font-bold text-headerFontColor">
+          <p className="text-xl  mt-2 italic font-bold ">
             Francisco Martinez
           </p>
           <p className="text-xl  mt-2 italic">
@@ -40,7 +40,7 @@ export default function ContactSection() {
           <div className="flex justify-center ">
             <div className="px-4 py-2">
               <a
-                className="text-linkButtonBg font-bold"
+                className=" font-bold"
                 href="https://github.com/franciscomartinez45"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export default function ContactSection() {
             </div>
             <div className="px-4 py-2">
               <a
-                className="text-linkButtonBg font-bold"
+                className=" font-bold"
                 href="https://www.linkedin.com/in/francisco-martinez-405512218/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function ContactSection() {
               <a
                 href={resumeUrl}
                 target="_blank"
-                className="text-linkButtonBg font-bold"
+                className=" font-bold"
               >
                 View Resume
               </a>
@@ -71,7 +71,7 @@ export default function ContactSection() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className=" text-center px-6 py-3 bg-linkButtonBg text-white font-semibold rounded shadow-lg cursor-pointer mt-5  justify-right"
+            className=" text-center text-buttonText px-6 py-3 bg-linkButtonBg  font-semibold rounded shadow-lg cursor-pointer mt-5  justify-right"
             onClick={() => scrollToSection("welcome")}
           >
             Back to top

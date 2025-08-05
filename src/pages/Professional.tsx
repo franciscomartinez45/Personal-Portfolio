@@ -4,13 +4,13 @@ export function ProfessionalSection() {
   return (
     <section
       id="experience"
-      className="section-container  "
+      className="section-container text-primaryText  "
     >
       <div className=" flex flex-col justify-center items-center justify-self-center">
-        <h1 className=" font-semibold text-headerFontColor mb-6 mt-20">
+        <h1 className=" font-semibold  mb-6 mt-20">
           EXPERIENCE
         </h1>
-        <div className=" text-headerFontColor w-[95vw] lg:w-[45vw] p-6 text-[clamp(9px,1.4vw,12px)] overflow-hidden bg-white/10 backdrop-blur-lg">
+        <div className="  w-[95vw] lg:w-[45vw] p-6 text-[clamp(9px,1.4vw,12px)] overflow-hidden bg-white/10 backdrop-blur-sm rounded-lg">
           <motion.div
             initial={"initial"}
             whileHover={"hover"}
@@ -22,7 +22,7 @@ export function ProfessionalSection() {
             }}
             viewport={{ once: true }}
           >
-            <p className=" font-bold text-headerFontColor">
+            <p className=" font-bold ">
               Research Assistant (California State University, Dominguez Hills)
             </p>
             <p>Fall 2023-Spring 2024</p>
@@ -57,7 +57,7 @@ export function ProfessionalSection() {
             }}
             viewport={{ once: true }}
           >
-            <p className=" font-bold text-headerFontColor">
+            <p className=" font-bold ">
               Costco Business Center
             </p>
             <p>April 2021 - Present</p>
@@ -97,10 +97,10 @@ export function ProfessionalSection() {
             }}
             viewport={{ once: true }}
           >
-            <p className="text-headerFontColor font-bold">
+            <p className=" font-bold">
               The Home Depot Department Supervisor
             </p>
-            <p className="text-headerFontColor font-bold">
+            <p className=" font-bold">
               Department Supervisor (various)
             </p>
             <p>October 2019-April 2021</p>

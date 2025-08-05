@@ -6,20 +6,20 @@ export default function ResearchSection() {
       className="section-container  "
       id="research"
     >
-      <div className="flex justify-center h-[60vh]">
+      <div className="flex justify-center h-[60vh] text-primaryText">
         <div className="py-20 " >
-          <h2 className="font-semibold text-center mb-6 text-headerFontColor">
+          <h2 className="font-semibold text-center mb-6 ">
             RESEARCH CONTRIBUTIONS
           </h2>
-          <div className="rounded-lg  text-[clamp(9px,2vw,12px)] bg-cardBackground text-secondaryText w-[95vw] lg:w-[50vw]  px-10 py-6 justify-self-center border-2  bg-white/10 backdrop-blur-lg">
-            <div className="flex justify-center align-middle text-headerFontColor">
+          <div className="rounded-lg  text-[clamp(9px,2vw,12px)] text-secondaryText w-[95vw] lg:w-[50vw]  px-10 py-6 justify-self-center   bg-white/10 backdrop-blur-sm">
+            <div className="flex justify-center align-middle ">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy
                 in Minority Populations"
               </h2>
             </div>
             <div className="flex justify-center align-middle py-1 ">
-              <strong className="mt-0 text-headerFontColor">
+              <strong className="mt-0 ">
                 California State University, Dominguez Hills (Fall 2023 - Spring
                 2024)
               </strong>
@@ -102,7 +102,7 @@ export default function ResearchSection() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className=" text-center px-6 py-3 bg-linkButtonBg text-white font-semibold rounded shadow-lg cursor-pointer mt-5 text-[clamp(8px,14px,16px)]"
+                className=" text-center px-6 py-3 bg-linkButtonBg text-buttonText font-semibold rounded shadow-lg cursor-pointer mt-5 text-[clamp(8px,14px,16px)]"
               >
                 GitHub Repo
               </motion.div>
