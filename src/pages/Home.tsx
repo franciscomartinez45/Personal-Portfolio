@@ -29,7 +29,7 @@ export default function HomeSection() {
           Francisco Martinez
         </h1>
         <p className="text-[clamp(14px,2.0vw,48px)] mt-2 text-black">
-          Incoming Master of Computer Science student at University of
+          Candidate of Master of Computer Science student at University of
           California, Irvine
         </p>
       </motion.div>
