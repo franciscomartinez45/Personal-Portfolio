@@ -9,15 +9,15 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="section-container bg-white/10 backdrop-blur-sm "
+      className="section-container  "
     >
       <div className="flex justify-center ">
         <div className=" flex flex-col justify-center items-center w-[90vw] lg:w-[40vw] justify-self-center">
           <h1 className=" font-semibold text-center mb-5 pt-20 text-headerFontColor">
             SKILLS
           </h1>
-          <div className=" text-[clamp(12px,2vw,14px)] ">
-            <div className="   justify-center items-center w-[80vw] lg:w-[40vw] justify-self-center p-4 mb-4 rounded-md">
+          <div className=" text-[clamp(12px,2vw,14px)] bg-white/10 backdrop-blur-lg">
+            <div className="   justify-center items-center w-[80vw] lg:w-[40vw] justify-self-center p-4 mb-4 rounded-md ">
               <h1 className="">
                 Throughout my academic career, I have developed highly demanded
                 industry skills within the following sections

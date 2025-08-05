@@ -7,19 +7,20 @@ export default function VantaBackground() {
   useEffect(() => {
     let effect: any;
     const initEffect = async () => {
-      const NET = (await import("vanta/dist/vanta.net.min")).default;
+      const NET = (await import("vanta/dist/vanta.ripple.min")).default;
       effect = NET({
         el: vantaRef.current,
         THREE: THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0x0,
-        backgroundColor: 0xffffff,
+  mouseControls: false,
+  touchControls: false,
+  gyroControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+
+
+  
       });
     };
     initEffect();

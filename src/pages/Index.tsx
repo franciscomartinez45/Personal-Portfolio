@@ -7,7 +7,7 @@ import ProgressBar from "../components/ProgressBar";
 import ResearchSection from "./Research";
 import OverviewSection from "./Overview";
 import { ProfessionalSection } from "./Professional";
-import VantaBackground from "../components/VantaBackground";
+import VantaBackground from "../assets/VantaBackground";
 
 export default function Index() {
   return (

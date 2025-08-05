@@ -3,15 +3,15 @@ import { motion } from "motion/react";
 export default function ResearchSection() {
   return (
     <section
-      className="section-container  bg-white/10 backdrop-blur-sm "
+      className="section-container  "
       id="research"
     >
       <div className="flex justify-center h-[60vh]">
-        <div className="py-20">
+        <div className="py-20 " >
           <h2 className="font-semibold text-center mb-6 text-headerFontColor">
             RESEARCH CONTRIBUTIONS
           </h2>
-          <div className="rounded-lg  text-[clamp(9px,2vw,12px)] bg-cardBackground text-secondaryText w-[95vw] lg:w-[50vw]  px-10 py-6 justify-self-center border-2 border-borderColor">
+          <div className="rounded-lg  text-[clamp(9px,2vw,12px)] bg-cardBackground text-secondaryText w-[95vw] lg:w-[50vw]  px-10 py-6 justify-self-center border-2  bg-white/10 backdrop-blur-lg">
             <div className="flex justify-center align-middle text-headerFontColor">
               <h2 className="italic ">
                 "Addressing Health Disparities through Improved Health Literacy

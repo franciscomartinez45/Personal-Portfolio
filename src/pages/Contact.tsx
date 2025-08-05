@@ -22,7 +22,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section-container  ">
       <section className="hero bg-cover bg-center text-center h-screen flex items-center justify-center  ">
-        <div className="text-center w-[90vw] lg:w-[30vw] bg-primaryBg ">
+        <div className="text-center w-[90vw] lg:w-[30vw] bg-white/10 backdrop-blur-sm  ">
           <h1 className="text-xl font-bold text-headerFontColor">
             Thank you for visiting my portfolio!
           </h1>

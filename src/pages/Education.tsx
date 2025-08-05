@@ -4,16 +4,16 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="section-container text-primaryText bg-white/10 backdrop-blur-sm  "
+      className="section-container text-primaryText  "
     >
       <div className="flex justify-center ">
         <div className="py-20 flex flex-col justify-center items-center w-[90vw] lg:w-[40vw] justify-self-center ">
           <h1 className=" font-semibold text-center mb-5 text-secondaryText text-headerFontColor">
             EDUCATION
           </h1>
-          <div className="text-[clamp(11px,2vw,12px)]  ">
+          <div className="text-[clamp(11px,2vw,12px)] bg-white/10 backdrop-blur-lg p-10 ">
             <motion.div
-              className="rounded-lg w-[80vw] lg:w-[40vw] mb-6 "
+              className="rounded-lg w-[80vw] lg:w-[40vw] mb-6  "
               initial={{ x: "100%" }}
               whileInView={{ x: "0%" }}
               transition={{ duration: 3 }}

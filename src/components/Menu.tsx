@@ -4,7 +4,7 @@ export const Menu = () => {
       <div className="flex justify-items-center fixed text-primaryText z-10">
         {sectionRefs.map((section, index) => (
           <div
-            className="text-center  hover:border-b-2 hover:border-black w-[12vw] lg:w-[6vw] bg-primaryBg  py-3  "
+            className="text-center  hover:border-b-2 hover:border-black w-[12vw] lg:w-[6vw]  py-3  "
             key={index}
           >
             <a

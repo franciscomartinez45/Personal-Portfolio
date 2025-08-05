@@ -55,13 +55,13 @@ export default function OverviewSection() {
   return (
     <section
       id="overview"
-      className="section-container bg-white/10 backdrop-blur-sm "
+      className="section-container  "
     >
-      <div className="py-20 flex flex-col justify-center items-center justify-self-center">
+      <div className="py-20 flex flex-col justify-center items-center justify-self-center ">
         <h1 className="font-semibold mb-6 text-headerFontColor">ABOUT</h1>
 
         <motion.div
-          className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)]  w-[90vw] lg:w-[40vw]  "
+          className="flex items-center justify-evenly mb-[clamp(0px,24px,24px)] p-[clamp(0px,24px,24px)]  w-[90vw] lg:w-[40vw] bg-white/10 backdrop-blur-lg "
           initial={{ x: "-100%" }}
           whileInView={{ x: "0%" }}
           transition={{ duration: 2 }}
@@ -89,7 +89,7 @@ export default function OverviewSection() {
           </div>
         </motion.div>
         <motion.div
-          className="flex items-center justify-evenly text-[clamp(12px,2vw,14px)]  p-6 mb-6   w-[90vw] lg:w-[40vw] "
+          className="flex items-center justify-evenly text-[clamp(12px,2vw,14px)]  p-6 mb-6   w-[90vw] lg:w-[40vw] bg-white/10 backdrop-blur-lg "
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}

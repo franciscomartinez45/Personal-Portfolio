@@ -4,21 +4,20 @@ export function ProfessionalSection() {
   return (
     <section
       id="experience"
-      className="section-container bg-white/10 backdrop-blur-sm "
+      className="section-container  "
     >
       <div className=" flex flex-col justify-center items-center justify-self-center">
         <h1 className=" font-semibold text-headerFontColor mb-6 mt-20">
           EXPERIENCE
         </h1>
-        <div className=" text-headerFontColor w-[95vw] lg:w-[45vw] p-6 text-[clamp(9px,1.4vw,12px)] overflow-hidden">
+        <div className=" text-headerFontColor w-[95vw] lg:w-[45vw] p-6 text-[clamp(9px,1.4vw,12px)] overflow-hidden bg-white/10 backdrop-blur-lg">
           <motion.div
             initial={"initial"}
             whileHover={"hover"}
             whileTap={"hover"}
             whileInView={"inView"}
             variants={{
-              hover: { scale: 1.05, opacity: 1 },
-              initial: { scale: 1, opacity: 0.5 },
+              
               inView: { x: ["-100%", "0%"], transition: { duration: 3 } },
             }}
             viewport={{ once: true }}
@@ -53,8 +52,7 @@ export function ProfessionalSection() {
             whileTap={"hover"}
             whileInView={"inView"}
             variants={{
-              hover: { scale: 1.05, opacity: 1 },
-              initial: { scale: 1, opacity: 0.5 },
+          
               inView: { x: ["100%", "0%"], transition: { duration: 3 } },
             }}
             viewport={{ once: true }}
@@ -94,8 +92,7 @@ export function ProfessionalSection() {
             whileTap={"hover"}
             whileInView={"inView"}
             variants={{
-              hover: { scale: 1.05, opacity: 1 },
-              initial: { scale: 1, opacity: 0.5 },
+            
               inView: { x: ["-100%", "0%"], transition: { duration: 3 } },
             }}
             viewport={{ once: true }}
