@@ -3,7 +3,7 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import s3 from "../client/s3client";
-import { Loading } from "../components/loading";
+
 export const getResumeUrl = async () => {
   try {
     const resumeCommand = new GetObjectCommand({
@@ -22,6 +22,12 @@ export const getResumeUrl = async () => {
 export default function OverviewSection() {
   const [imageUrl, setImageUrl] = useState<string>("");
   const [resumeUrl, setResumeUrl] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  }
+
   const getBucketData = async () => {
     try {
       const imageCommand = new GetObjectCommand({
@@ -32,7 +38,7 @@ export default function OverviewSection() {
       const signedImageUrl = await getSignedUrl(s3, imageCommand, {
         expiresIn: 3600,
       });
-
+      
       setImageUrl(signedImageUrl);
     } catch (error) {
       console.error("Error fetching signed URL:", error);
@@ -68,15 +74,20 @@ export default function OverviewSection() {
           transition={{ duration: 2 }}
           viewport={{ once: true }}
         >
-          <div className="mr-[clamp(0px,24px,24px)] flex justify-center items-center ">
-            {/* {imageUrl && (
-              <img
-                src={imageUrl}
-                className="object-contain rounded-xl w-[45vw] lg:w-[15vw] "
-              />
-            )} */}
-            <Loading/>
-          </div>
+          <div className="relative mr-[clamp(0px,24px,24px)] flex justify-center items-center">
+  {loading && (
+    <span className="w-12 h-12 border-[5px] border-white border-b-transparent rounded-full inline-block box-border animate-spin absolute"></span>
+  )}
+
+  <img
+    src={imageUrl}
+    className={`object-contain transition-opacity duration-500 rounded-xl w-[45vw] lg:w-[15vw] ${
+      loading ? 'opacity-0' : 'opacity-100'
+    }`}
+    onLoad={handleImageLoad}
+  />
+</div>
+
 
           <div className=" text-[clamp(12px,2vw,14px)] text-primaryText">
             <h1 className="">
