@@ -3,6 +3,7 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import s3 from "../client/s3client";
+import { Loading } from "../components/loading";
 export const getResumeUrl = async () => {
   try {
     const resumeCommand = new GetObjectCommand({
@@ -68,12 +69,13 @@ export default function OverviewSection() {
           viewport={{ once: true }}
         >
           <div className="mr-[clamp(0px,24px,24px)] flex justify-center items-center ">
-            {imageUrl && (
+            {/* {imageUrl && (
               <img
                 src={imageUrl}
                 className="object-contain rounded-xl w-[45vw] lg:w-[15vw] "
               />
-            )}
+            )} */}
+            <Loading/>
           </div>
 
           <div className=" text-[clamp(12px,2vw,14px)] text-primaryText">
